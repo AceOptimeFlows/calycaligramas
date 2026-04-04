@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/logo.png" alt="C△lyCaLigramas logo" width="112" />
+  <img src="assets/img/calycaligramas512.png" alt="C△lyCaLigramas logo" width="112" />
 </p>
 
 <h1 align="center">C△lyCaLigramas</h1>
