@@ -431,5 +431,3 @@ If you publish this project publicly, it also makes sense to keep the repository
 ## Final note
 
 C△lyCaLigramas is a surprisingly powerful example of what a carefully designed **vanilla web app** can do when it embraces the browser properly: creative tooling, local media workflows, installability, offline support, and multilingual UX — all without a heavy stack.
-
-If your goal is to present a polished, distinctive, technically solid creative PWA, this project already has the right DNA.
