@@ -1,0 +1,28 @@
+{
+  "name": "C△lyCaLigramas — OptimeFlow(s)",
+  "short_name": "CalyCal",
+  "description": "Crea caligramas y figuras tipográficas con giro de cálculos. PWA 100% local/offline.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#121212",
+  "background_color": "#0b1e21",
+  "icons": [
+    {
+      "src": "assets/img/calycaligramas192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/calycaligramas512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/calycaligramas180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

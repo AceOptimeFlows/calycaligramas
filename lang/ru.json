@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "OptimeFlow(s) — C△lyCaLigramas",
+    "applicationName": "C△lyCaLigramas",
+    "appleTitle": "C△lyCaLigramas"
+  },
+  "brand": {
+    "optimeflow": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "logoAlt": "Логотип OptimeFlow(s)",
+    "logoLinkLabel": "OptimeFlow(s)"
+  },
+  "common": {
+    "settings": "Настройки",
+    "close": "Закрыть",
+    "copy": "Копировать",
+    "copied": "Скопировано",
+    "copyError": "Не удалось скопировать",
+    "secondsUnit": "s",
+    "infinity": "∞"
+  },
+  "settings": {
+    "theme": "Тема",
+    "language": "Язык",
+    "panels": "Панели",
+    "panelsAvailable": "Доступные панели",
+    "resetPanels": "Сбросить расположение панелей",
+    "panelToggles": {
+      "general": "Общие",
+      "dynamic": "Динамика",
+      "inspector": "Правая панель"
+    },
+    "themes": {
+      "original": "Оригинал",
+      "bosque": "Лес",
+      "cyber": "Кибер-неон",
+      "luz": "Светлая",
+      "carbono": "Карбон",
+      "matrix": "Матрица",
+      "vaporwave": "Вейпорвейв"
+    },
+    "languages": {
+      "es": "ES",
+      "en": "EN",
+      "pt-br": "PT‑BR",
+      "fr": "FR",
+      "it": "IT",
+      "de": "DE",
+      "ko": "KO",
+      "ja": "JA",
+      "zh": "ZH",
+      "ru": "RU",
+      "hi": "HI",
+      "ca": "CA"
+    },
+    "installButton": "Установить приложение",
+    "installHintIos": "На iPhone/iPad используйте «Поделиться» → «На экран Домой»."
+  },
+  "workspace": {
+    "legend": "Совет: в режиме <b>Свободное рисование</b> нажмите и перетаскивайте; текст «штампуется» через заданный шаг."
+  },
+  "tabs": {
+    "categories": "Категории настроек",
+    "text": "Текст",
+    "visual": "Визуализация",
+    "figure": "Фигура",
+    "formula": "Формула"
+  },
+  "panels": {
+    "general": {
+      "title": "⚙️ Общие настройки",
+      "mode": "Режим",
+      "modeOptions": {
+        "free": "Свободное рисование",
+        "shape": "Фигуры",
+        "formula": "Формулы (x(t), y(t))"
+      },
+      "newCanvas": "Новый холст",
+      "undo": "Отменить",
+      "redo": "Повторить",
+      "undoTitle": "Отменить (Ctrl+Z)",
+      "redoTitle": "Повторить (Ctrl+Y)",
+      "saveDesign": "Сохранить дизайн",
+      "loadDesign": "Загрузить дизайн",
+      "exportPng": "Экспорт изображения (PNG)",
+      "exportClip20s": "Экспорт клипа 20 с",
+      "exportClipBusy": "Экспорт клипа..."
+    },
+    "dynamic": {
+      "title": "⚡ Динамические настройки",
+      "playback": "Воспроизведение",
+      "play": "Воспроизвести",
+      "pause": "Пауза",
+      "duration": "Оценочная длительность",
+      "effect": "Эффект",
+      "effectType": "Тип",
+      "effectOptions": {
+        "none": "Нет",
+        "typewriter": "Печатная машинка",
+        "random": "Случайное появление",
+        "wave": "Волна"
+      },
+      "delayPerCharacter": "Задержка на символ (мс)",
+      "repeat": "Повтор",
+      "waveAmplitude": "Амплитуда (px)",
+      "waveFrequency": "Частота",
+      "waveSpeed": "Скорость (рад/с)",
+      "view": "Вид",
+      "viewMode": "Режим",
+      "viewModes": {
+        "2d": "2D",
+        "3d": "3D"
+      },
+      "rotX": "Поворот X (°)",
+      "rotY": "Поворот Y (°)",
+      "rotZ": "Поворот Z (°)",
+      "depth": "Глубина",
+      "autoCamera": "Автокамера",
+      "returnToStart": "Вернуться к началу",
+      "inverseMode": "Обратный режим",
+      "velocityH": "Гор. скорость (°/с)",
+      "velocityV": "Вер. скорость (°/с)",
+      "velocityZ": "Скорость вращения Z (°/с)",
+      "shortcuts": "Клавиши: стрелки ← → ↑ ↓ для X/Y и Q/E для Z.",
+      "audioSection": "Аудио",
+      "addAudio": "Добавить аудио",
+      "removeAudio": "Удалить аудио",
+      "audioStatusEmpty": "Аудио не загружено.",
+      "audioStatusLoaded": "Аудио загружено: {{name}}",
+      "recordMic": "Записать с микрофона",
+      "stopRecording": "Остановить запись",
+      "removeRecording": "Удалить запись",
+      "recordStatusEmpty": "Записи нет.",
+      "recordStatusReady": "Запись готова к экспорту.",
+      "recordStatusRecording": "Идёт запись с микрофона..."
+    },
+    "inspector": {
+      "title": "🗂️ Панель настроек"
+    },
+    "text": {
+      "title": "🔤 Настройки текста",
+      "text": "Текст",
+      "loopText": "Зациклить текст",
+      "autoOrient": "Ориентировать по траектории",
+      "family": "Семейство",
+      "fontOptions": {
+        "system": "Системный",
+        "serif": "С засечками",
+        "monospace": "Моноширинный"
+      },
+      "sizeMin": "Мин. размер",
+      "sizeMax": "Макс. размер",
+      "weight": "Насыщенность",
+      "letterSpacing": "Межбуквенный интервал",
+      "italic": "Курсив",
+      "startText": "Начать текст сначала",
+      "startTextTitle": "Начать следующий рисунок с начала текста и поместить курсор в начало.",
+      "byWord": "По словам"
+    },
+    "visual": {
+      "title": "🌈 Настройки визуализации",
+      "color3d": "Цвет и 3D",
+      "colorA": "Цвет A",
+      "colorB": "Цвет B",
+      "alpha": "Альфа",
+      "shade3d": "3D-свечение",
+      "zFreq": "Частота Z",
+      "zPhase": "Фаза Z",
+      "stamping": "Штамповка",
+      "spacing": "Шаг (px)",
+      "baseAngle": "Поворот (°)",
+      "jitterSize": "Разброс размера (%)",
+      "jitterAngle": "Разброс угла (°)",
+      "grid": "Сетка",
+      "darkBg": "Тёмный фон",
+      "fitOnResize": "Подгонять при изменении размера"
+    },
+    "figure": {
+      "title": "🧩 Настройки фигуры",
+      "type": "Тип",
+      "typeOptions": {
+        "circle": "Круг",
+        "spiral": "Спираль",
+        "rose": "Роза",
+        "heart": "Сердце",
+        "polygon": "Многоугольник",
+        "lissajous": "Лиссажу"
+      },
+      "amplitude": "Радиус/амплитуда",
+      "param2": "Параметр 2 (витки/k/стороны)",
+      "steps": "Шаги t",
+      "rotate": "Повернуть фигуру (°)",
+      "generate": "Создать фигуру"
+    },
+    "formula": {
+      "title": "∑ Настройки формулы",
+      "fx": "x(t) =",
+      "fy": "y(t) =",
+      "fz": "z(t) =",
+      "tMin": "t мин",
+      "tMax": "t макс",
+      "tSteps": "Шаги t",
+      "autoScale": "Автомасштаб",
+      "generate": "Создать формулу",
+      "help": "Функции: sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max; константы: PI, E."
+    }
+  },
+  "footer": {
+    "brand": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "author": "Andrés Calvo Espinosa",
+    "authorOrcid": "ORCID Andrés Calvo Espinosa",
+    "coherenceLabel": "Универсальная согласованность",
+    "iconAlt": "Универсальная согласованность",
+    "license": "MIT",
+    "privacy": "Конфиденциальность"
+  },
+  "toast": {
+    "updateAvailable": "Доступна новая версия ·",
+    "reload": "Обновить"
+  },
+  "overlays": {
+    "privacy": {
+      "title": "Конфиденциальность и локальная обработка данных",
+      "body": "<p><b>OptimeFlow(s) C△lyCaLigramas</b> работает в основном локально в вашем браузере. Ваши тексты, штрихи, настройки, выбранные аудиофайлы и записи с микрофона обрабатываются на вашем устройстве для отображения и экспорта; это приложение не отправляет этот творческий контент на сторонние серверы.</p><ul><li><b>Данные, которые могут храниться в вашем браузере:</b> язык, тема, видимость панелей и настройки интерфейса через <b>localStorage</b>, а также ресурсы PWA и словари языков в <b>кэше браузера</b> для офлайн-загрузки и использования.</li><li><b>Аудио и микрофон:</b> доступ к микрофону запрашивается только если вы выбираете запись. Загруженное или записанное аудио обрабатывается локально для воспроизведения и экспорта клипа.</li><li><b>Экспорт:</b> файлы PNG, JSON и видео создаются в вашем браузере и напрямую скачиваются на ваше устройство.</li><li><b>Сетевое взаимодействие:</b> приложение может запрашивать собственные статические файлы и переводы с того же источника, чтобы загружаться или обновляться как PWA. В этом пакете не выявлены трекеры, аналитика или распространяемые сторонние библиотеки JavaScript.</li><li><b>Контроль пользователя:</b> вы можете удалить локальные данные из браузера, в любой момент отозвать разрешение на использование микрофона и удалить из самого приложения загруженное или записанное аудио перед экспортом.</li></ul><p><b>Ответственный:</b> Andrés Calvo Espinosa.<br/>Последнее обновление: {{updated}}.</p>"
+    },
+    "license": {
+      "title": "Лицензия MIT",
+      "body": "MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    },
+    "coherence": {
+      "title": "Универсальная согласованность",
+      "body": "Пусть эта работа служит и благодарностью, и обязательством: думать, чувствовать и действовать в одном направлении, без «украшений»; продолжать творить с этикой, радостью и уважением ко всему, что нас связывает."
+    }
+  },
+  "messages": {
+    "formulaError": "Ошибка в формулах",
+    "tooFewPoints": "Слишком мало корректных точек",
+    "invalidFile": "Недопустимый файл",
+    "copied": "Скопировано",
+    "copyError": "Не удалось скопировать",
+    "swError": "Ошибка service worker",
+    "exportClipUnsupported": "Экспорт видео недоступен в этом браузере.",
+    "exportClipError": "Не удалось экспортировать видеоклип.",
+    "audioFileError": "Не удалось загрузить аудиофайл.",
+    "micUnsupported": "Запись аудио недоступна в этом браузере.",
+    "micAccessError": "Не удалось получить доступ к микрофону.",
+    "recordingError": "Не удалось завершить запись аудио.",
+    "exportModuleMissing": "Модуль экспорта видео не найден.",
+    "exportFormatUnsupported": "Этот формат видео недоступен в этом браузере.",
+    "installUnavailable": "Установка сейчас недоступна в этом браузере.",
+    "installIosInstructions": "На iPhone/iPad нажмите «Поделиться», а затем «На экран Домой»."
+  },
+  "files": {
+    "exportPng": "calycaligrama.png",
+    "saveJson": "calycaligrama.json",
+    "exportClipWebm": "calycaligrama-clip-20s.webm",
+    "exportClipMp4": "calycaligrama-clip-20s.mp4"
+  },
+  "runtime": {
+    "zeroSeconds": "0.0 s",
+    "durationSeconds": "{{value}} s",
+    "durationInfinity": "∞"
+  },
+  "defaults": {
+    "text": "C△lyCaLigramas",
+    "formula": {
+      "fx": "cos(2*t)*(1+0.3*cos(12*t))",
+      "fy": "sin(2*t)*(1+0.3*cos(12*t))",
+      "fz": "0.5+0.5*sin(6*t)"
+    }
+  },
+  "dialogs": {
+    "exportClip": {
+      "title": "Экспорт клипа 20 с",
+      "body": "Выберите формат видео. MP4 будет доступен, только если ваш браузер умеет записывать его нативно.",
+      "webm": "WebM",
+      "mp4": "MP4",
+      "available": "Доступно",
+      "unavailable": "Недоступно в этом браузере"
+    }
+  }
+}

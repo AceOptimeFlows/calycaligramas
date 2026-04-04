@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use C△lyCaLigramas, please cite it using the metadata below. If you archive a release on Zenodo, prefer the version-specific DOI for the exact release you used."
+title: "C△lyCaLigramas"
+type: software
+license: "MIT"
+abstract: >-
+  C△lyCaLigramas is a local-first typographic drawing studio for calligrams,
+  parametric figures, formula-driven compositions, animated text art, 3D
+  previews, offline PWA workflows, and local audio-assisted video export.
+authors:
+  - given-names: "Andrés"
+    family-names: "Calvo Espinosa"
+    affiliation: "OptimeFlow(s)"
+    orcid: "https://orcid.org/0009-0005-4079-7418"
+keywords:
+  - "calligrams"
+  - "typography"
+  - "generative art"
+  - "parametric drawing"
+  - "progressive web app"
+  - "local-first"
+  - "canvas"
+  - "animation"
+  - "creative coding"

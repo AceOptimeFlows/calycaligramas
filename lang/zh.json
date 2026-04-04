@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "OptimeFlow(s) — C△lyCaLigramas",
+    "applicationName": "C△lyCaLigramas",
+    "appleTitle": "C△lyCaLigramas"
+  },
+  "brand": {
+    "optimeflow": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "logoAlt": "OptimeFlow(s) 标志",
+    "logoLinkLabel": "OptimeFlow(s)"
+  },
+  "common": {
+    "settings": "设置",
+    "close": "关闭",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyError": "无法复制",
+    "secondsUnit": "s",
+    "infinity": "∞"
+  },
+  "settings": {
+    "theme": "主题",
+    "language": "语言",
+    "panels": "面板",
+    "panelsAvailable": "可用面板",
+    "resetPanels": "重置面板布局",
+    "panelToggles": {
+      "general": "常规",
+      "dynamic": "动态",
+      "inspector": "右侧面板"
+    },
+    "themes": {
+      "original": "原始",
+      "bosque": "森林",
+      "cyber": "赛博霓虹",
+      "luz": "明亮",
+      "carbono": "碳纤维",
+      "matrix": "矩阵",
+      "vaporwave": "蒸汽波"
+    },
+    "languages": {
+      "es": "ES",
+      "en": "EN",
+      "pt-br": "PT‑BR",
+      "fr": "FR",
+      "it": "IT",
+      "de": "DE",
+      "ko": "KO",
+      "ja": "JA",
+      "zh": "ZH",
+      "ru": "RU",
+      "hi": "HI",
+      "ca": "CA"
+    },
+    "installButton": "安装应用",
+    "installHintIos": "在 iPhone/iPad 上请使用“共享”→“添加到主屏幕”。"
+  },
+  "workspace": {
+    "legend": "提示：在 <b>自由绘制</b> 中按住并拖动；文本会每隔一定步长“盖印”一次。"
+  },
+  "tabs": {
+    "categories": "设置分类",
+    "text": "文本",
+    "visual": "可视化",
+    "figure": "图形",
+    "formula": "公式"
+  },
+  "panels": {
+    "general": {
+      "title": "⚙️ 常规设置",
+      "mode": "模式",
+      "modeOptions": {
+        "free": "自由绘制",
+        "shape": "图形",
+        "formula": "公式 (x(t), y(t))"
+      },
+      "newCanvas": "新建画布",
+      "undo": "撤销",
+      "redo": "重做",
+      "undoTitle": "撤销 (Ctrl+Z)",
+      "redoTitle": "重做 (Ctrl+Y)",
+      "saveDesign": "保存设计",
+      "loadDesign": "加载设计",
+      "exportPng": "导出图像 (PNG)",
+      "exportClip20s": "导出 20 秒片段",
+      "exportClipBusy": "正在导出片段..."
+    },
+    "dynamic": {
+      "title": "⚡ 动态设置",
+      "playback": "播放",
+      "play": "播放",
+      "pause": "暂停",
+      "duration": "预计时长",
+      "effect": "效果",
+      "effectType": "类型",
+      "effectOptions": {
+        "none": "无",
+        "typewriter": "打字机",
+        "random": "随机出现",
+        "wave": "波浪"
+      },
+      "delayPerCharacter": "每个字符延迟 (ms)",
+      "repeat": "重复",
+      "waveAmplitude": "振幅 (px)",
+      "waveFrequency": "频率",
+      "waveSpeed": "速度 (rad/s)",
+      "view": "视图",
+      "viewMode": "模式",
+      "viewModes": {
+        "2d": "2D",
+        "3d": "3D"
+      },
+      "rotX": "X 旋转 (°)",
+      "rotY": "Y 旋转 (°)",
+      "rotZ": "Z 旋转 (°)",
+      "depth": "深度",
+      "autoCamera": "自动镜头",
+      "returnToStart": "回到起点",
+      "inverseMode": "反向模式",
+      "velocityH": "水平速度 (°/s)",
+      "velocityV": "垂直速度 (°/s)",
+      "velocityZ": "Z 旋转速度 (°/s)",
+      "shortcuts": "快捷键：← → ↑ ↓ 用于 X/Y，Q/E 用于 Z。",
+      "audioSection": "音频",
+      "addAudio": "添加音频",
+      "removeAudio": "移除音频",
+      "audioStatusEmpty": "未加载音频。",
+      "audioStatusLoaded": "已加载音频：{{name}}",
+      "recordMic": "录制麦克风",
+      "stopRecording": "停止录音",
+      "removeRecording": "删除录音",
+      "recordStatusEmpty": "没有录音。",
+      "recordStatusReady": "录音已准备好导出。",
+      "recordStatusRecording": "正在从麦克风录音..."
+    },
+    "inspector": {
+      "title": "🗂️ 设置面板"
+    },
+    "text": {
+      "title": "🔤 文本设置",
+      "text": "文本",
+      "loopText": "循环文本",
+      "autoOrient": "沿路径自动定向",
+      "family": "字体族",
+      "fontOptions": {
+        "system": "系统",
+        "serif": "衬线",
+        "monospace": "等宽"
+      },
+      "sizeMin": "最小字号",
+      "sizeMax": "最大字号",
+      "weight": "字重",
+      "letterSpacing": "字间距",
+      "italic": "斜体",
+      "startText": "从头开始文本",
+      "startTextTitle": "让下一次绘制从文本开头重新开始，并将光标放到起始位置。",
+      "byWord": "按词"
+    },
+    "visual": {
+      "title": "🌈 可视化设置",
+      "color3d": "颜色与 3D",
+      "colorA": "颜色 A",
+      "colorB": "颜色 B",
+      "alpha": "透明度",
+      "shade3d": "3D 光泽",
+      "zFreq": "Z 频率",
+      "zPhase": "Z 相位",
+      "stamping": "盖印",
+      "spacing": "步长 (px)",
+      "baseAngle": "旋转 (°)",
+      "jitterSize": "大小抖动 (%)",
+      "jitterAngle": "角度抖动 (°)",
+      "grid": "网格",
+      "darkBg": "深色背景",
+      "fitOnResize": "随缩放适配"
+    },
+    "figure": {
+      "title": "🧩 图形设置",
+      "type": "类型",
+      "typeOptions": {
+        "circle": "圆",
+        "spiral": "螺旋",
+        "rose": "玫瑰曲线",
+        "heart": "心形",
+        "polygon": "多边形",
+        "lissajous": "李萨如"
+      },
+      "amplitude": "半径/振幅",
+      "param2": "参数 2（圈数/k/边数）",
+      "steps": "t 步数",
+      "rotate": "旋转图形 (°)",
+      "generate": "生成图形"
+    },
+    "formula": {
+      "title": "∑ 公式设置",
+      "fx": "x(t) =",
+      "fy": "y(t) =",
+      "fz": "z(t) =",
+      "tMin": "t 最小",
+      "tMax": "t 最大",
+      "tSteps": "t 步数",
+      "autoScale": "自动缩放",
+      "generate": "生成公式",
+      "help": "函数：sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max；常量：PI, E。"
+    }
+  },
+  "footer": {
+    "brand": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "author": "Andrés Calvo Espinosa",
+    "authorOrcid": "Andrés Calvo Espinosa 的 ORCID",
+    "coherenceLabel": "普遍一致性",
+    "iconAlt": "普遍一致性",
+    "license": "MIT",
+    "privacy": "隐私"
+  },
+  "toast": {
+    "updateAvailable": "有新版本可用 ·",
+    "reload": "更新"
+  },
+  "overlays": {
+    "privacy": {
+      "title": "隐私与本地数据处理",
+      "body": "<p><b>OptimeFlow(s) C△lyCaLigramas</b> 主要在你的浏览器中本地运行。你的文本、笔画、设置、所选音频文件以及麦克风录音都会在你的设备上处理，以用于显示和导出；此应用不会将这些创作内容发送到第三方服务器。</p><ul><li><b>可能保存在浏览器中的数据：</b> 语言、主题、面板可见性和界面偏好会通过 <b>localStorage</b> 保存，此外，为了支持离线加载和使用，PWA 资源和语言词典也可能保存在 <b>浏览器缓存</b> 中。</li><li><b>音频与麦克风：</b> 只有在你选择录音时才会请求麦克风权限。你加载或录制的音频会在本地处理，用于播放和导出片段。</li><li><b>导出：</b> PNG、JSON 和视频文件都在浏览器中生成，并直接下载到你的设备。</li><li><b>网络连接：</b> 应用可能会从同一来源请求自己的静态文件和翻译，以便作为 PWA 加载或更新。在此打包中，未发现跟踪器、分析工具或重新分发的第三方 JavaScript 库。</li><li><b>用户控制：</b> 你可以从浏览器中删除本地数据，随时撤销麦克风权限，并在导出前直接在应用中删除已加载或已录制的音频。</li></ul><p><b>负责人：</b> Andrés Calvo Espinosa.<br/>最后更新：{{updated}}。</p>"
+    },
+    "license": {
+      "title": "MIT 许可证",
+      "body": "MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    },
+    "coherence": {
+      "title": "普遍一致性",
+      "body": "愿这部作品既是感谢，也是承诺：在同一方向上思考、感受并行动，不加“装饰”；继续以伦理、喜悦以及对一切联结我们的事物的尊重去创作。"
+    }
+  },
+  "messages": {
+    "formulaError": "公式错误",
+    "tooFewPoints": "有效点太少",
+    "invalidFile": "无效文件",
+    "copied": "已复制",
+    "copyError": "无法复制",
+    "swError": "Service Worker 错误",
+    "exportClipUnsupported": "此浏览器不支持导出视频。",
+    "exportClipError": "无法导出视频片段。",
+    "audioFileError": "无法加载音频文件。",
+    "micUnsupported": "此浏览器不支持录制音频。",
+    "micAccessError": "无法访问麦克风。",
+    "recordingError": "无法完成音频录制。",
+    "exportModuleMissing": "未找到视频导出模块。",
+    "exportFormatUnsupported": "此浏览器不支持该视频格式。",
+    "installUnavailable": "当前此浏览器暂不支持安装。",
+    "installIosInstructions": "在 iPhone/iPad 上，请先点“共享”，然后点“添加到主屏幕”。"
+  },
+  "files": {
+    "exportPng": "calycaligrama.png",
+    "saveJson": "calycaligrama.json",
+    "exportClipWebm": "calycaligrama-clip-20s.webm",
+    "exportClipMp4": "calycaligrama-clip-20s.mp4"
+  },
+  "runtime": {
+    "zeroSeconds": "0.0 s",
+    "durationSeconds": "{{value}} s",
+    "durationInfinity": "∞"
+  },
+  "defaults": {
+    "text": "C△lyCaLigramas",
+    "formula": {
+      "fx": "cos(2*t)*(1+0.3*cos(12*t))",
+      "fy": "sin(2*t)*(1+0.3*cos(12*t))",
+      "fz": "0.5+0.5*sin(6*t)"
+    }
+  },
+  "dialogs": {
+    "exportClip": {
+      "title": "导出 20 秒片段",
+      "body": "请选择视频格式。只有当你的浏览器原生支持录制 MP4 时，MP4 选项才会启用。",
+      "webm": "WebM",
+      "mp4": "MP4",
+      "available": "可用",
+      "unavailable": "此浏览器不可用"
+    }
+  }
+}

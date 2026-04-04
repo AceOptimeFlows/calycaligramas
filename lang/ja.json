@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "OptimeFlow(s) — C△lyCaLigramas",
+    "applicationName": "C△lyCaLigramas",
+    "appleTitle": "C△lyCaLigramas"
+  },
+  "brand": {
+    "optimeflow": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "logoAlt": "OptimeFlow(s) のロゴ",
+    "logoLinkLabel": "OptimeFlow(s)"
+  },
+  "common": {
+    "settings": "設定",
+    "close": "閉じる",
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "copyError": "コピーできませんでした",
+    "secondsUnit": "s",
+    "infinity": "∞"
+  },
+  "settings": {
+    "theme": "テーマ",
+    "language": "言語",
+    "panels": "パネル",
+    "panelsAvailable": "利用可能なパネル",
+    "resetPanels": "パネル配置をリセット",
+    "panelToggles": {
+      "general": "一般",
+      "dynamic": "動的",
+      "inspector": "右パネル"
+    },
+    "themes": {
+      "original": "オリジナル",
+      "bosque": "フォレスト",
+      "cyber": "サイバーネオン",
+      "luz": "ライト",
+      "carbono": "カーボン",
+      "matrix": "マトリックス",
+      "vaporwave": "ヴェイパーウェーブ"
+    },
+    "languages": {
+      "es": "ES",
+      "en": "EN",
+      "pt-br": "PT‑BR",
+      "fr": "FR",
+      "it": "IT",
+      "de": "DE",
+      "ko": "KO",
+      "ja": "JA",
+      "zh": "ZH",
+      "ru": "RU",
+      "hi": "HI",
+      "ca": "CA"
+    },
+    "installButton": "アプリをインストール",
+    "installHintIos": "iPhone/iPad では「共有」→「ホーム画面に追加」を使ってください。"
+  },
+  "workspace": {
+    "legend": "ヒント: <b>フリードロー</b>ではクリックしたままドラッグすると、一定間隔ごとにテキストが「スタンプ」されます。"
+  },
+  "tabs": {
+    "categories": "設定カテゴリ",
+    "text": "テキスト",
+    "visual": "表示",
+    "figure": "図形",
+    "formula": "数式"
+  },
+  "panels": {
+    "general": {
+      "title": "⚙️ 一般設定",
+      "mode": "モード",
+      "modeOptions": {
+        "free": "フリードロー",
+        "shape": "図形",
+        "formula": "数式 (x(t), y(t))"
+      },
+      "newCanvas": "新しいキャンバス",
+      "undo": "元に戻す",
+      "redo": "やり直し",
+      "undoTitle": "元に戻す (Ctrl+Z)",
+      "redoTitle": "やり直し (Ctrl+Y)",
+      "saveDesign": "デザインを保存",
+      "loadDesign": "デザインを読み込む",
+      "exportPng": "画像を書き出す (PNG)",
+      "exportClip20s": "20秒クリップを書き出す",
+      "exportClipBusy": "クリップを書き出しています..."
+    },
+    "dynamic": {
+      "title": "⚡ 動的設定",
+      "playback": "再生",
+      "play": "再生",
+      "pause": "一時停止",
+      "duration": "推定時間",
+      "effect": "効果",
+      "effectType": "種類",
+      "effectOptions": {
+        "none": "なし",
+        "typewriter": "タイプライター",
+        "random": "ランダム表示",
+        "wave": "波"
+      },
+      "delayPerCharacter": "1文字あたりの遅延 (ms)",
+      "repeat": "繰り返し",
+      "waveAmplitude": "振幅 (px)",
+      "waveFrequency": "周波数",
+      "waveSpeed": "速度 (rad/s)",
+      "view": "表示",
+      "viewMode": "モード",
+      "viewModes": {
+        "2d": "2D",
+        "3d": "3D"
+      },
+      "rotX": "X回転 (°)",
+      "rotY": "Y回転 (°)",
+      "rotZ": "Z回転 (°)",
+      "depth": "奥行き",
+      "autoCamera": "自動カメラ",
+      "returnToStart": "最初に戻る",
+      "inverseMode": "逆方向モード",
+      "velocityH": "水平速度 (°/s)",
+      "velocityV": "垂直速度 (°/s)",
+      "velocityZ": "Z回転速度 (°/s)",
+      "shortcuts": "ショートカット: X/Y は矢印 ← → ↑ ↓、Z は Q/E。",
+      "audioSection": "オーディオ",
+      "addAudio": "オーディオを追加",
+      "removeAudio": "オーディオを削除",
+      "audioStatusEmpty": "オーディオが読み込まれていません。",
+      "audioStatusLoaded": "読み込まれたオーディオ: {{name}}",
+      "recordMic": "マイクで録音",
+      "stopRecording": "録音を停止",
+      "removeRecording": "録音を削除",
+      "recordStatusEmpty": "録音はありません。",
+      "recordStatusReady": "書き出し用の録音の準備ができました。",
+      "recordStatusRecording": "マイクから録音中..."
+    },
+    "inspector": {
+      "title": "🗂️ 設定パネル"
+    },
+    "text": {
+      "title": "🔤 テキスト設定",
+      "text": "テキスト",
+      "loopText": "テキストをループ",
+      "autoOrient": "軌跡に合わせて向きを調整",
+      "family": "ファミリー",
+      "fontOptions": {
+        "system": "システム",
+        "serif": "セリフ",
+        "monospace": "等幅"
+      },
+      "sizeMin": "最小サイズ",
+      "sizeMax": "最大サイズ",
+      "weight": "太さ",
+      "letterSpacing": "文字間隔",
+      "italic": "イタリック",
+      "startText": "テキストを先頭から",
+      "startTextTitle": "次の描画をテキストの先頭から開始し、カーソルを先頭に置きます。",
+      "byWord": "単語ごと"
+    },
+    "visual": {
+      "title": "🌈 表示設定",
+      "color3d": "色と3D",
+      "colorA": "色 A",
+      "colorB": "色 B",
+      "alpha": "アルファ",
+      "shade3d": "3Dグロー",
+      "zFreq": "Z周波数",
+      "zPhase": "Z位相",
+      "stamping": "スタンプ",
+      "spacing": "間隔 (px)",
+      "baseAngle": "回転 (°)",
+      "jitterSize": "サイズのゆらぎ (%)",
+      "jitterAngle": "角度のゆらぎ (°)",
+      "grid": "グリッド",
+      "darkBg": "暗い背景",
+      "fitOnResize": "リサイズ時に合わせる"
+    },
+    "figure": {
+      "title": "🧩 図形設定",
+      "type": "種類",
+      "typeOptions": {
+        "circle": "円",
+        "spiral": "スパイラル",
+        "rose": "ローズ",
+        "heart": "ハート",
+        "polygon": "多角形",
+        "lissajous": "リサージュ"
+      },
+      "amplitude": "半径/振幅",
+      "param2": "パラメータ 2 (周回数/k/辺数)",
+      "steps": "t のステップ",
+      "rotate": "図形を回転 (°)",
+      "generate": "図形を生成"
+    },
+    "formula": {
+      "title": "∑ 数式設定",
+      "fx": "x(t) =",
+      "fy": "y(t) =",
+      "fz": "z(t) =",
+      "tMin": "t 最小",
+      "tMax": "t 最大",
+      "tSteps": "t のステップ",
+      "autoScale": "自動スケール",
+      "generate": "数式を生成",
+      "help": "関数: sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max; 定数: PI, E."
+    }
+  },
+  "footer": {
+    "brand": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "author": "Andrés Calvo Espinosa",
+    "authorOrcid": "Andrés Calvo Espinosa の ORCID",
+    "coherenceLabel": "普遍的な一貫性",
+    "iconAlt": "普遍的な一貫性",
+    "license": "MIT",
+    "privacy": "プライバシー"
+  },
+  "toast": {
+    "updateAvailable": "新しいバージョンがあります ·",
+    "reload": "更新"
+  },
+  "overlays": {
+    "privacy": {
+      "title": "プライバシーとローカルデータ処理",
+      "body": "<p><b>OptimeFlow(s) C△lyCaLigramas</b> は主にブラウザ内でローカルに動作します。テキスト、ストローク、設定、選択した音声ファイル、マイク録音は、表示と書き出しのためにお使いの端末上で処理されます。このアプリは、その創作コンテンツを第三者サーバーへ送信しません。</p><ul><li><b>ブラウザに保存される可能性があるデータ:</b> 言語、テーマ、パネルの表示状態、インターフェース設定が <b>localStorage</b> に、またオフラインでの読み込みと利用のために PWA リソースと言語辞書が <b>ブラウザキャッシュ</b> に保存される場合があります。</li><li><b>オーディオとマイク:</b> マイクへのアクセスは、録音を選択した場合にのみ要求されます。読み込んだ音声や録音した音声は、再生とクリップの書き出しのためにローカルで処理されます。</li><li><b>書き出し:</b> PNG、JSON、動画ファイルはブラウザ内で生成され、直接お使いの端末にダウンロードされます。</li><li><b>接続:</b> このアプリは、PWA として読み込まれたり更新されたりするために、同一オリジンから自分自身の静的ファイルと翻訳を要求することがあります。このバンドルでは、トラッカー、分析ツール、再配布されたサードパーティ製 JavaScript ライブラリは確認されていません。</li><li><b>ユーザーによる制御:</b> ブラウザからローカルデータを削除し、いつでもマイク権限を取り消し、書き出し前にアプリ内で読み込んだ音声や録音を削除できます。</li></ul><p><b>責任者:</b> Andrés Calvo Espinosa.<br/>最終更新: {{updated}}.</p>"
+    },
+    "license": {
+      "title": "MITライセンス",
+      "body": "MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    },
+    "coherence": {
+      "title": "普遍的な一貫性",
+      "body": "この作品が、感謝であると同時に誓いでもありますように。『装飾』なしに、同じ方向へ考え、感じ、行動し、私たちを結ぶすべてのものへの倫理、喜び、敬意をもって創作を続けていくために。"
+    }
+  },
+  "messages": {
+    "formulaError": "数式エラー",
+    "tooFewPoints": "有効な点が少なすぎます",
+    "invalidFile": "無効なファイル",
+    "copied": "コピーしました",
+    "copyError": "コピーできませんでした",
+    "swError": "Service Worker エラー",
+    "exportClipUnsupported": "このブラウザでは動画の書き出しは利用できません。",
+    "exportClipError": "動画クリップを書き出せませんでした。",
+    "audioFileError": "音声ファイルを読み込めませんでした。",
+    "micUnsupported": "このブラウザでは音声録音は利用できません。",
+    "micAccessError": "マイクにアクセスできませんでした。",
+    "recordingError": "音声録音を完了できませんでした。",
+    "exportModuleMissing": "動画書き出しモジュールが見つかりませんでした。",
+    "exportFormatUnsupported": "このブラウザではその動画形式は利用できません。",
+    "installUnavailable": "このブラウザでは現在インストールできません。",
+    "installIosInstructions": "iPhone/iPad では「共有」をタップしてから「ホーム画面に追加」を選んでください。"
+  },
+  "files": {
+    "exportPng": "calycaligrama.png",
+    "saveJson": "calycaligrama.json",
+    "exportClipWebm": "calycaligrama-clip-20s.webm",
+    "exportClipMp4": "calycaligrama-clip-20s.mp4"
+  },
+  "runtime": {
+    "zeroSeconds": "0.0 s",
+    "durationSeconds": "{{value}} s",
+    "durationInfinity": "∞"
+  },
+  "defaults": {
+    "text": "C△lyCaLigramas",
+    "formula": {
+      "fx": "cos(2*t)*(1+0.3*cos(12*t))",
+      "fy": "sin(2*t)*(1+0.3*cos(12*t))",
+      "fz": "0.5+0.5*sin(6*t)"
+    }
+  },
+  "dialogs": {
+    "exportClip": {
+      "title": "20秒クリップを書き出す",
+      "body": "動画形式を選択してください。MP4 は、ブラウザがネイティブに録画できる場合にのみ有効になります。",
+      "webm": "WebM",
+      "mp4": "MP4",
+      "available": "利用可能",
+      "unavailable": "このブラウザでは利用不可"
+    }
+  }
+}

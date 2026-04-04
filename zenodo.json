@@ -1,0 +1,26 @@
+{
+  "title": "C△lyCaLigramas",
+  "description": "C△lyCaLigramas is a local-first typographic drawing studio by OptimeFlow(s) for calligrams, freehand text stamping, parametric figures, formula-driven compositions, animated text art, 3D previews, offline PWA usage, and local audio-assisted PNG/WebM/MP4 export.",
+  "creators": [
+    {
+      "name": "Calvo Espinosa, Andrés",
+      "orcid": "0009-0005-4079-7418",
+      "affiliation": "OptimeFlow(s)"
+    }
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "calligrams",
+    "typography",
+    "generative art",
+    "parametric drawing",
+    "progressive web app",
+    "local-first",
+    "canvas",
+    "animation",
+    "creative coding"
+  ]
+}

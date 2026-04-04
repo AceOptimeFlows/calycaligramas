@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "OptimeFlow(s) — C△lyCaLigramas",
+    "applicationName": "C△lyCaLigramas",
+    "appleTitle": "C△lyCaLigramas"
+  },
+  "brand": {
+    "optimeflow": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "logoAlt": "OptimeFlow(s) का लोगो",
+    "logoLinkLabel": "OptimeFlow(s)"
+  },
+  "common": {
+    "settings": "सेटिंग्स",
+    "close": "बंद करें",
+    "copy": "कॉपी करें",
+    "copied": "कॉपी हो गया",
+    "copyError": "कॉपी नहीं किया जा सका",
+    "secondsUnit": "s",
+    "infinity": "∞"
+  },
+  "settings": {
+    "theme": "थीम",
+    "language": "भाषा",
+    "panels": "पैनल",
+    "panelsAvailable": "उपलब्ध पैनल",
+    "resetPanels": "पैनल लेआउट रीसेट करें",
+    "panelToggles": {
+      "general": "सामान्य",
+      "dynamic": "गतिशील",
+      "inspector": "दायाँ पैनल"
+    },
+    "themes": {
+      "original": "मूल",
+      "bosque": "जंगल",
+      "cyber": "साइबर नीयॉन",
+      "luz": "लाइट",
+      "carbono": "कार्बन",
+      "matrix": "मैट्रिक्स",
+      "vaporwave": "वेपरवेव"
+    },
+    "languages": {
+      "es": "ES",
+      "en": "EN",
+      "pt-br": "PT‑BR",
+      "fr": "FR",
+      "it": "IT",
+      "de": "DE",
+      "ko": "KO",
+      "ja": "JA",
+      "zh": "ZH",
+      "ru": "RU",
+      "hi": "HI",
+      "ca": "CA"
+    },
+    "installButton": "ऐप इंस्टॉल करें",
+    "installHintIos": "iPhone/iPad पर शेयर → होम स्क्रीन पर जोड़ें का उपयोग करें।"
+  },
+  "workspace": {
+    "legend": "सुझाव: <b>फ़्री ड्रॉ</b> में क्लिक करके खींचें; टेक्स्ट तय अंतराल पर “स्टैम्प” होता है।"
+  },
+  "tabs": {
+    "categories": "सेटिंग्स श्रेणियाँ",
+    "text": "टेक्स्ट",
+    "visual": "विज़ुअलाइज़ेशन",
+    "figure": "आकृति",
+    "formula": "सूत्र"
+  },
+  "panels": {
+    "general": {
+      "title": "⚙️ सामान्य सेटिंग्स",
+      "mode": "मोड",
+      "modeOptions": {
+        "free": "फ़्री ड्रॉ",
+        "shape": "आकृतियाँ",
+        "formula": "सूत्र (x(t), y(t))"
+      },
+      "newCanvas": "नया कैनवस",
+      "undo": "पूर्ववत",
+      "redo": "फिर से करें",
+      "undoTitle": "पूर्ववत (Ctrl+Z)",
+      "redoTitle": "फिर से करें (Ctrl+Y)",
+      "saveDesign": "डिज़ाइन सहेजें",
+      "loadDesign": "डिज़ाइन लोड करें",
+      "exportPng": "इमेज निर्यात करें (PNG)",
+      "exportClip20s": "20 सेकंड क्लिप निर्यात करें",
+      "exportClipBusy": "क्लिप निर्यात हो रही है..."
+    },
+    "dynamic": {
+      "title": "⚡ गतिशील सेटिंग्स",
+      "playback": "प्लेबैक",
+      "play": "चलाएँ",
+      "pause": "रोकें",
+      "duration": "अनुमानित अवधि",
+      "effect": "इफेक्ट",
+      "effectType": "प्रकार",
+      "effectOptions": {
+        "none": "कोई नहीं",
+        "typewriter": "टाइपराइटर",
+        "random": "यादृच्छिक प्रकट होना",
+        "wave": "तरंग"
+      },
+      "delayPerCharacter": "प्रति अक्षर देरी (ms)",
+      "repeat": "दोहराएँ",
+      "waveAmplitude": "आयाम (px)",
+      "waveFrequency": "आवृत्ति",
+      "waveSpeed": "गति (rad/s)",
+      "view": "दृश्य",
+      "viewMode": "मोड",
+      "viewModes": {
+        "2d": "2D",
+        "3d": "3D"
+      },
+      "rotX": "X घूर्णन (°)",
+      "rotY": "Y घूर्णन (°)",
+      "rotZ": "Z घूर्णन (°)",
+      "depth": "गहराई",
+      "autoCamera": "स्वचालित कैमरा",
+      "returnToStart": "शुरुआत पर लौटें",
+      "inverseMode": "उल्टा मोड",
+      "velocityH": "क्षैतिज गति (°/s)",
+      "velocityV": "ऊर्ध्व गति (°/s)",
+      "velocityZ": "Z घूर्णन गति (°/s)",
+      "shortcuts": "शॉर्टकट: X/Y के लिए ← → ↑ ↓ और Z के लिए Q/E।",
+      "audioSection": "ऑडियो",
+      "addAudio": "ऑडियो जोड़ें",
+      "removeAudio": "ऑडियो हटाएँ",
+      "audioStatusEmpty": "कोई ऑडियो लोड नहीं है।",
+      "audioStatusLoaded": "लोड किया गया ऑडियो: {{name}}",
+      "recordMic": "माइक्रोफ़ोन रिकॉर्ड करें",
+      "stopRecording": "रिकॉर्डिंग रोकें",
+      "removeRecording": "रिकॉर्डिंग हटाएँ",
+      "recordStatusEmpty": "कोई रिकॉर्डिंग नहीं।",
+      "recordStatusReady": "रिकॉर्डिंग निर्यात के लिए तैयार है।",
+      "recordStatusRecording": "माइक्रोफ़ोन से रिकॉर्डिंग हो रही है..."
+    },
+    "inspector": {
+      "title": "🗂️ सेटिंग्स पैनल"
+    },
+    "text": {
+      "title": "🔤 टेक्स्ट सेटिंग्स",
+      "text": "टेक्स्ट",
+      "loopText": "टेक्स्ट लूप करें",
+      "autoOrient": "पथ के अनुसार दिशा दें",
+      "family": "फ़ॉन्ट परिवार",
+      "fontOptions": {
+        "system": "सिस्टम",
+        "serif": "सेरिफ",
+        "monospace": "मोनोस्पेस"
+      },
+      "sizeMin": "न्यूनतम आकार",
+      "sizeMax": "अधिकतम आकार",
+      "weight": "वज़न",
+      "letterSpacing": "अक्षर अंतर",
+      "italic": "इटैलिक",
+      "startText": "टेक्स्ट शुरुआत से",
+      "startTextTitle": "अगली ड्रॉइंग को टेक्स्ट की शुरुआत से फिर शुरू करें और कर्सर को शुरुआत में रखें।",
+      "byWord": "शब्द-दर-शब्द"
+    },
+    "visual": {
+      "title": "🌈 विज़ुअलाइज़ेशन सेटिंग्स",
+      "color3d": "रंग और 3D",
+      "colorA": "रंग A",
+      "colorB": "रंग B",
+      "alpha": "अल्फ़ा",
+      "shade3d": "3D चमक",
+      "zFreq": "Z आवृत्ति",
+      "zPhase": "Z चरण",
+      "stamping": "स्टैम्पिंग",
+      "spacing": "कदम (px)",
+      "baseAngle": "घूर्णन (°)",
+      "jitterSize": "आकार जिटर (%)",
+      "jitterAngle": "कोण जिटर (°)",
+      "grid": "ग्रिड",
+      "darkBg": "गहरा बैकग्राउंड",
+      "fitOnResize": "रीसाइज़ पर फिट करें"
+    },
+    "figure": {
+      "title": "🧩 आकृति सेटिंग्स",
+      "type": "प्रकार",
+      "typeOptions": {
+        "circle": "वृत्त",
+        "spiral": "सर्पिल",
+        "rose": "रोज़",
+        "heart": "दिल",
+        "polygon": "बहुभुज",
+        "lissajous": "लिसाजू"
+      },
+      "amplitude": "त्रिज्या/आयाम",
+      "param2": "पैरामीटर 2 (चक्कर/k/भुजाएँ)",
+      "steps": "t चरण",
+      "rotate": "आकृति घुमाएँ (°)",
+      "generate": "आकृति बनाएं"
+    },
+    "formula": {
+      "title": "∑ सूत्र सेटिंग्स",
+      "fx": "x(t) =",
+      "fy": "y(t) =",
+      "fz": "z(t) =",
+      "tMin": "t न्यूनतम",
+      "tMax": "t अधिकतम",
+      "tSteps": "t चरण",
+      "autoScale": "स्वचालित स्केल",
+      "generate": "सूत्र बनाएं",
+      "help": "फ़ंक्शन: sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max; नियतांक: PI, E."
+    }
+  },
+  "footer": {
+    "brand": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "author": "Andrés Calvo Espinosa",
+    "authorOrcid": "Andrés Calvo Espinosa का ORCID",
+    "coherenceLabel": "सार्वभौमिक संगति",
+    "iconAlt": "सार्वभौमिक संगति",
+    "license": "MIT",
+    "privacy": "गोपनीयता"
+  },
+  "toast": {
+    "updateAvailable": "नया संस्करण उपलब्ध है ·",
+    "reload": "अपडेट करें"
+  },
+  "overlays": {
+    "privacy": {
+      "title": "गोपनीयता और स्थानीय डेटा प्रसंस्करण",
+      "body": "<p><b>OptimeFlow(s) C△lyCaLigramas</b> मुख्य रूप से आपके ब्राउज़र में लोकल रूप से चलता है। आपके टेक्स्ट, स्ट्रोक, सेटिंग्स, चुनी गई ऑडियो फ़ाइलें और माइक्रोफ़ोन रिकॉर्डिंग आपके डिवाइस पर प्रदर्शन और निर्यात के लिए प्रोसेस होती हैं; यह ऐप उस रचनात्मक सामग्री को किसी तृतीय-पक्ष सर्वर पर नहीं भेजता।</p><ul><li><b>वे डेटा जो आपके ब्राउज़र में संग्रहीत रह सकते हैं:</b> भाषा, थीम, पैनलों की दृश्यता और इंटरफ़ेस वरीयताएँ <b>localStorage</b> के माध्यम से, तथा ऑफ़लाइन लोड और उपयोग की सुविधा के लिए PWA संसाधन और भाषा शब्दकोश <b>ब्राउज़र कैश</b> में।</li><li><b>ऑडियो और माइक्रोफ़ोन:</b> माइक्रोफ़ोन की अनुमति केवल तभी माँगी जाती है जब आप रिकॉर्ड करना चुनते हैं। जो ऑडियो आप लोड या रिकॉर्ड करते हैं, उसे प्लेबैक और क्लिप निर्यात के लिए लोकल रूप से संभाला जाता है।</li><li><b>निर्यात:</b> PNG, JSON और वीडियो फ़ाइलें आपके ब्राउज़र में बनाई जाती हैं और सीधे आपके डिवाइस पर डाउनलोड होती हैं।</li><li><b>कनेक्टिविटी:</b> यह ऐप PWA के रूप में लोड या अपडेट होने के लिए उसी ओरिजिन से अपनी स्थिर फ़ाइलें और अनुवाद मांग सकती है। इस बंडल में कोई ट्रैकर, एनालिटिक्स या पुनर्वितरित तृतीय-पक्ष JavaScript लाइब्रेरी नहीं मिली हैं।</li><li><b>उपयोगकर्ता नियंत्रण:</b> आप अपने ब्राउज़र से लोकल डेटा हटा सकते हैं, कभी भी माइक्रोफ़ोन अनुमति वापस ले सकते हैं, और निर्यात से पहले ऐप के भीतर लोड या रिकॉर्ड किया गया ऑडियो हटा सकते हैं।</li></ul><p><b>जिम्मेदार व्यक्ति:</b> Andrés Calvo Espinosa.<br/>अंतिम अपडेट: {{updated}}.</p>"
+    },
+    "license": {
+      "title": "MIT लाइसेंस",
+      "body": "MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    },
+    "coherence": {
+      "title": "सार्वभौमिक संगति",
+      "body": "यह कृति आभार भी बने और संकल्प भी: एक ही दिशा में सोचना, महसूस करना और कार्य करना, बिना “सजावट” के; और हमें जोड़ने वाली हर चीज़ के प्रति नैतिकता, आनंद और सम्मान के साथ रचना करते रहना।"
+    }
+  },
+  "messages": {
+    "formulaError": "सूत्र में त्रुटि",
+    "tooFewPoints": "मान्य बिंदु बहुत कम हैं",
+    "invalidFile": "अमान्य फ़ाइल",
+    "copied": "कॉपी हो गया",
+    "copyError": "कॉपी नहीं किया जा सका",
+    "swError": "सर्विस वर्कर त्रुटि",
+    "exportClipUnsupported": "इस ब्राउज़र में वीडियो निर्यात उपलब्ध नहीं है।",
+    "exportClipError": "वीडियो क्लिप निर्यात नहीं की जा सकी।",
+    "audioFileError": "ऑडियो फ़ाइल लोड नहीं की जा सकी।",
+    "micUnsupported": "इस ब्राउज़र में ऑडियो रिकॉर्डिंग उपलब्ध नहीं है।",
+    "micAccessError": "माइक्रोफ़ोन तक पहुँचा नहीं जा सका।",
+    "recordingError": "ऑडियो रिकॉर्डिंग पूरी नहीं की जा सकी।",
+    "exportModuleMissing": "वीडियो निर्यात मॉड्यूल नहीं मिला।",
+    "exportFormatUnsupported": "यह वीडियो फ़ॉर्मेट इस ब्राउज़र में उपलब्ध नहीं है।",
+    "installUnavailable": "अभी इस ब्राउज़र में इंस्टॉलेशन उपलब्ध नहीं है।",
+    "installIosInstructions": "iPhone/iPad पर शेयर पर टैप करें और फिर “होम स्क्रीन पर जोड़ें” चुनें।"
+  },
+  "files": {
+    "exportPng": "calycaligrama.png",
+    "saveJson": "calycaligrama.json",
+    "exportClipWebm": "calycaligrama-clip-20s.webm",
+    "exportClipMp4": "calycaligrama-clip-20s.mp4"
+  },
+  "runtime": {
+    "zeroSeconds": "0.0 s",
+    "durationSeconds": "{{value}} s",
+    "durationInfinity": "∞"
+  },
+  "defaults": {
+    "text": "C△lyCaLigramas",
+    "formula": {
+      "fx": "cos(2*t)*(1+0.3*cos(12*t))",
+      "fy": "sin(2*t)*(1+0.3*cos(12*t))",
+      "fz": "0.5+0.5*sin(6*t)"
+    }
+  },
+  "dialogs": {
+    "exportClip": {
+      "title": "20 सेकंड क्लिप निर्यात करें",
+      "body": "वीडियो फ़ॉर्मेट चुनें। MP4 केवल तभी सक्रिय होगा जब आपका ब्राउज़र उसे मूल रूप से रिकॉर्ड कर सके।",
+      "webm": "WebM",
+      "mp4": "MP4",
+      "available": "उपलब्ध",
+      "unavailable": "इस ब्राउज़र में उपलब्ध नहीं"
+    }
+  }
+}

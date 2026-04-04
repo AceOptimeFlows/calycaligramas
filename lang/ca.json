@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "OptimeFlow(s) — C△lyCaLigramas",
+    "applicationName": "C△lyCaLigramas",
+    "appleTitle": "C△lyCaLigramas"
+  },
+  "brand": {
+    "optimeflow": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "logoAlt": "Logotip d'OptimeFlow(s)",
+    "logoLinkLabel": "OptimeFlow(s)"
+  },
+  "common": {
+    "settings": "Configuració",
+    "close": "Tanca",
+    "copy": "Copia",
+    "copied": "Copiat",
+    "copyError": "No s'ha pogut copiar",
+    "secondsUnit": "s",
+    "infinity": "∞"
+  },
+  "settings": {
+    "theme": "Tema",
+    "language": "Llengua",
+    "panels": "Panells",
+    "panelsAvailable": "Panells disponibles",
+    "resetPanels": "Restableix la disposició dels panells",
+    "panelToggles": {
+      "general": "General",
+      "dynamic": "Dinàmic",
+      "inspector": "Panell dret"
+    },
+    "themes": {
+      "original": "Original",
+      "bosque": "Bosc",
+      "cyber": "Neó ciber",
+      "luz": "Llum",
+      "carbono": "Carboni",
+      "matrix": "Matrix",
+      "vaporwave": "Vaporwave"
+    },
+    "languages": {
+      "es": "ES",
+      "en": "EN",
+      "pt-br": "PT‑BR",
+      "fr": "FR",
+      "it": "IT",
+      "de": "DE",
+      "ko": "KO",
+      "ja": "JA",
+      "zh": "ZH",
+      "ru": "RU",
+      "hi": "HI",
+      "ca": "CA"
+    },
+    "installButton": "Instal·la l'app",
+    "installHintIos": "A l’iPhone/iPad fes servir Comparteix → Afegeix a la pantalla d’inici."
+  },
+  "workspace": {
+    "legend": "Consell: a <b>Dibuix lliure</b> prem i arrossega; el text s’“estampa” cada cert pas."
+  },
+  "tabs": {
+    "categories": "Categories de configuració",
+    "text": "Text",
+    "visual": "Visualització",
+    "figure": "Figura",
+    "formula": "Fórmula"
+  },
+  "panels": {
+    "general": {
+      "title": "⚙️ Configuració general",
+      "mode": "Mode",
+      "modeOptions": {
+        "free": "Dibuix lliure",
+        "shape": "Figures",
+        "formula": "Fórmules (x(t), y(t))"
+      },
+      "newCanvas": "Llenç nou",
+      "undo": "Desfés",
+      "redo": "Refés",
+      "undoTitle": "Desfés (Ctrl+Z)",
+      "redoTitle": "Refés (Ctrl+Y)",
+      "saveDesign": "Desa el disseny",
+      "loadDesign": "Carrega el disseny",
+      "exportPng": "Exporta imatge (PNG)",
+      "exportClip20s": "Exporta clip de 20 s",
+      "exportClipBusy": "S'està exportant el clip..."
+    },
+    "dynamic": {
+      "title": "⚡ Configuració dinàmica",
+      "playback": "Reproducció",
+      "play": "Reprodueix",
+      "pause": "Pausa",
+      "duration": "Durada estimada",
+      "effect": "Efecte",
+      "effectType": "Tipus",
+      "effectOptions": {
+        "none": "Cap",
+        "typewriter": "Màquina d'escriure",
+        "random": "Aparició aleatòria",
+        "wave": "Ona"
+      },
+      "delayPerCharacter": "Retard per caràcter (ms)",
+      "repeat": "Repeteix",
+      "waveAmplitude": "Amplitud (px)",
+      "waveFrequency": "Freqüència",
+      "waveSpeed": "Velocitat (rad/s)",
+      "view": "Vista",
+      "viewMode": "Mode",
+      "viewModes": {
+        "2d": "2D",
+        "3d": "3D"
+      },
+      "rotX": "Rot X (°)",
+      "rotY": "Rot Y (°)",
+      "rotZ": "Rot Z (°)",
+      "depth": "Profunditat",
+      "autoCamera": "Càmera automàtica",
+      "returnToStart": "Torna a l'inici",
+      "inverseMode": "Mode invers",
+      "velocityH": "Vel. horitzontal (°/s)",
+      "velocityV": "Vel. vertical (°/s)",
+      "velocityZ": "Vel. rotació Z (°/s)",
+      "shortcuts": "Dreceres: fletxes ← → ↑ ↓ per a X/Y i Q/E per a Z.",
+      "audioSection": "Àudio",
+      "addAudio": "Afegeix àudio",
+      "removeAudio": "Elimina l'àudio",
+      "audioStatusEmpty": "No hi ha cap àudio carregat.",
+      "audioStatusLoaded": "Àudio carregat: {{name}}",
+      "recordMic": "Grava amb el micròfon",
+      "stopRecording": "Atura la gravació",
+      "removeRecording": "Elimina la gravació",
+      "recordStatusEmpty": "Sense gravació.",
+      "recordStatusReady": "Gravació llesta per exportar.",
+      "recordStatusRecording": "S'està gravant des del micròfon..."
+    },
+    "inspector": {
+      "title": "🗂️ Panell de configuració"
+    },
+    "text": {
+      "title": "🔤 Configuració del text",
+      "text": "Text",
+      "loopText": "Text en bucle",
+      "autoOrient": "Orienta al traç",
+      "family": "Família",
+      "fontOptions": {
+        "system": "Sistema",
+        "serif": "Serif",
+        "monospace": "Monoespai"
+      },
+      "sizeMin": "Mida mín.",
+      "sizeMax": "Mida màx.",
+      "weight": "Pes",
+      "letterSpacing": "Espaiat",
+      "italic": "Cursiva",
+      "startText": "Reinicia el text",
+      "startTextTitle": "Reinicia el següent dibuix des de l'inici del text i col·loca el cursor al començament.",
+      "byWord": "Per paraula"
+    },
+    "visual": {
+      "title": "🌈 Configuració de visualització",
+      "color3d": "Color i 3D",
+      "colorA": "Color A",
+      "colorB": "Color B",
+      "alpha": "Alfa",
+      "shade3d": "Brillantor 3D",
+      "zFreq": "Freqüència Z",
+      "zPhase": "Fase Z",
+      "stamping": "Estampació",
+      "spacing": "Pas (px)",
+      "baseAngle": "Rotació (°)",
+      "jitterSize": "Variació de mida (%)",
+      "jitterAngle": "Variació d'angle (°)",
+      "grid": "Graella",
+      "darkBg": "Fons fosc",
+      "fitOnResize": "Ajusta en redimensionar"
+    },
+    "figure": {
+      "title": "🧩 Configuració de la figura",
+      "type": "Tipus",
+      "typeOptions": {
+        "circle": "Cercle",
+        "spiral": "Espiral",
+        "rose": "Rosa",
+        "heart": "Cor",
+        "polygon": "Polígon",
+        "lissajous": "Lissajous"
+      },
+      "amplitude": "Radi/Amplitud",
+      "param2": "Paràmetre 2 (voltes/k/costats)",
+      "steps": "Passos t",
+      "rotate": "Gira la figura (°)",
+      "generate": "Genera la figura"
+    },
+    "formula": {
+      "title": "∑ Configuració de la fórmula",
+      "fx": "x(t) =",
+      "fy": "y(t) =",
+      "fz": "z(t) =",
+      "tMin": "t mín.",
+      "tMax": "t màx.",
+      "tSteps": "Passos t",
+      "autoScale": "Escala automàtica",
+      "generate": "Genera la fórmula",
+      "help": "Funcions: sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max; constants: PI, E."
+    }
+  },
+  "footer": {
+    "brand": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "author": "Andrés Calvo Espinosa",
+    "authorOrcid": "ORCID d'Andrés Calvo Espinosa",
+    "coherenceLabel": "Coherència Universal",
+    "iconAlt": "Coherència Universal",
+    "license": "MIT",
+    "privacy": "Privadesa"
+  },
+  "toast": {
+    "updateAvailable": "Nova versió disponible ·",
+    "reload": "Actualitza"
+  },
+  "overlays": {
+    "privacy": {
+      "title": "Privadesa i tractament local de dades",
+      "body": "<p><b>OptimeFlow(s) C△lyCaLigramas</b> funciona principalment de manera local al teu navegador. Els teus textos, traços, ajustos, fitxers d’àudio seleccionats i enregistraments de micròfon es processen al teu dispositiu per a la visualització i l’exportació; aquesta app no envia aquest contingut creatiu a servidors de tercers.</p><ul><li><b>Dades que poden quedar emmagatzemades al teu navegador:</b> idioma, tema, visibilitat dels panells i preferències d’interfície mitjançant <b>localStorage</b>, així com recursos de la PWA i diccionaris d’idioma a la <b>memòria cau del navegador</b> per permetre la càrrega i l’ús fora de línia.</li><li><b>Àudio i micròfon:</b> l’accés al micròfon només se sol·licita si tries gravar. Els àudios que carregues o graves es gestionen localment per a la reproducció i l’exportació del clip.</li><li><b>Exportacions:</b> els fitxers PNG, JSON i vídeo es generen al teu navegador i es descarreguen directament al teu dispositiu.</li><li><b>Connectivitat:</b> l’app pot sol·licitar els seus propis fitxers estàtics i traduccions des del mateix origen per carregar-se o actualitzar-se com a PWA. En aquest paquet no s’han identificat rastrejadors, analítica ni llibreries JavaScript de tercers redistribuïdes.</li><li><b>Control de l’usuari:</b> pots esborrar les dades locals des del teu navegador, revocar el permís del micròfon quan vulguis i eliminar des de la mateixa app l’àudio carregat o gravat abans d’exportar.</li></ul><p><b>Responsable:</b> Andrés Calvo Espinosa.<br/>Última actualització: {{updated}}.</p>"
+    },
+    "license": {
+      "title": "Llicència MIT",
+      "body": "MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    },
+    "coherence": {
+      "title": "Coherència Universal",
+      "body": "Que aquesta obra serveixi com a agraïment i com a compromís: pensar, sentir i actuar en la mateixa direcció, sense “ornaments”; continuar creant amb ètica, amb alegria i amb respecte per tot allò que ens connecta."
+    }
+  },
+  "messages": {
+    "formulaError": "Error a les fórmules",
+    "tooFewPoints": "Massa pocs punts vàlids",
+    "invalidFile": "Fitxer no vàlid",
+    "copied": "Copiat",
+    "copyError": "No s'ha pogut copiar",
+    "swError": "Error del SW",
+    "exportClipUnsupported": "L'exportació de vídeo no està disponible en aquest navegador.",
+    "exportClipError": "No s'ha pogut exportar el clip de vídeo.",
+    "audioFileError": "No s'ha pogut carregar el fitxer d'àudio.",
+    "micUnsupported": "La gravació d'àudio no està disponible en aquest navegador.",
+    "micAccessError": "No s'ha pogut accedir al micròfon.",
+    "recordingError": "No s'ha pogut completar la gravació d'àudio.",
+    "exportModuleMissing": "No s'ha trobat el mòdul d'exportació de vídeo.",
+    "exportFormatUnsupported": "Aquest format de vídeo no està disponible en aquest navegador.",
+    "installUnavailable": "La instal·lació no està disponible en aquest navegador ara mateix.",
+    "installIosInstructions": "A l’iPhone/iPad, toca Comparteix i després “Afegeix a la pantalla d’inici”."
+  },
+  "files": {
+    "exportPng": "calycaligrama.png",
+    "saveJson": "calycaligrama.json",
+    "exportClipWebm": "calycaligrama-clip-20s.webm",
+    "exportClipMp4": "calycaligrama-clip-20s.mp4"
+  },
+  "runtime": {
+    "zeroSeconds": "0.0 s",
+    "durationSeconds": "{{value}} s",
+    "durationInfinity": "∞"
+  },
+  "defaults": {
+    "text": "C△lyCaLigramas",
+    "formula": {
+      "fx": "cos(2*t)*(1+0.3*cos(12*t))",
+      "fy": "sin(2*t)*(1+0.3*cos(12*t))",
+      "fz": "0.5+0.5*sin(6*t)"
+    }
+  },
+  "dialogs": {
+    "exportClip": {
+      "title": "Exporta clip de 20 s",
+      "body": "Tria el format de vídeo. MP4 només s’activarà si el teu navegador el pot gravar de manera nativa.",
+      "webm": "WebM",
+      "mp4": "MP4",
+      "available": "Disponible",
+      "unavailable": "No disponible en aquest navegador"
+    }
+  }
+}

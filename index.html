@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title data-i18n="meta.title">OptimeFlow(s) — C△lyCaLigramas</title>
+<meta content="#121212" name="theme-color"/>
+<meta content="C△lyCaLigramas" data-i18n-content="meta.applicationName" name="application-name"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="C△lyCaLigramas" data-i18n-content="meta.appleTitle" name="apple-mobile-web-app-title"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="#0b1120" name="msapplication-TileColor"/>
+<link href="./manifest.json" rel="manifest"/>
+<link href="./assets/img/calycaligramas192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="./assets/img/calycaligramas180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page-root">
+<header class="app-header brand-header" role="banner">
+<div class="brand">
+<a aria-label="OptimeFlow(s)" class="brand-home-link" data-i18n-aria-label="brand.logoLinkLabel" data-i18n-title="brand.logoLinkLabel" href="https://optimeflow.com/" rel="noopener noreferrer" target="_blank" title="OptimeFlow(s)">
+<img alt="OptimeFlow(s) logo" class="brand-logo heat" data-i18n-alt="brand.logoAlt" id="appLogo" src="assets/img/logo.png"/>
+</a>
+<span class="brand-word brand-neon" data-i18n="brand.optimeflow" id="brandWord">OptimeFlow(s)</span>
+<div aria-hidden="true" class="tagline tagline-caly" id="tagline"></div>
+<span class="sr-only" data-i18n="brand.app" id="i-app-title">C△lyCaLigramas</span>
+<div class="quick-controls">
+<button aria-controls="settingsSheet" aria-expanded="false" class="icon-button" id="btnSettings" type="button">
+<span class="sr-only" data-i18n="common.settings">Ajustes</span>
+<span aria-hidden="true" class="icon-gear"></span>
+</button>
+</div>
+</div>
+</header>
+<div aria-hidden="true" class="settings-sheet" id="settingsSheet">
+<div class="settings-card">
+<div class="settings-row">
+<label data-i18n="settings.theme" for="themeSelect">Tema</label>
+<select class="sel" id="themeSelect">
+<option data-i18n="settings.themes.original" value="original">Original</option>
+<option data-i18n="settings.themes.bosque" value="bosque">Bosque</option>
+<option data-i18n="settings.themes.cyber" value="cyber">Neón Cyber</option>
+<option data-i18n="settings.themes.luz" value="luz">Luz</option>
+<option data-i18n="settings.themes.carbono" value="carbono">Carbono</option>
+<option data-i18n="settings.themes.matrix" value="matrix">Matrix</option>
+<option data-i18n="settings.themes.vaporwave" value="vaporwave">Vaporwave</option>
+</select>
+</div>
+<div class="settings-row">
+<label data-i18n="settings.language" for="languageSelect">Idioma</label>
+<select class="sel" id="languageSelect"><option data-i18n="settings.languages.es" value="es">ES</option><option data-i18n="settings.languages.en" value="en">EN</option><option data-i18n="settings.languages.pt-br" value="pt-br">PT‑BR</option><option data-i18n="settings.languages.fr" value="fr">FR</option><option data-i18n="settings.languages.it" value="it">IT</option><option data-i18n="settings.languages.de" value="de">DE</option><option data-i18n="settings.languages.ko" value="ko">KO</option><option data-i18n="settings.languages.ja" value="ja">JA</option><option data-i18n="settings.languages.zh" value="zh">ZH</option><option data-i18n="settings.languages.ru" value="ru">RU</option><option data-i18n="settings.languages.hi" value="hi">HI</option><option data-i18n="settings.languages.ca" value="ca">CA</option></select>
+</div>
+<div aria-hidden="true" class="settings-row" hidden="" id="installAppRow">
+<button class="btn" data-i18n="settings.installButton" id="btnInstallApp" type="button">Instalar app</button>
+<div aria-hidden="true" class="small muted panel-note" data-i18n="settings.installHintIos" hidden="" id="installAppHint">En iPhone/iPad usa Compartir → Añadir a pantalla de inicio.</div>
+</div>
+<div aria-hidden="true" class="settings-divider"></div>
+<p class="settings-block-title" data-i18n="settings.panels">Paneles</p>
+<div aria-label="Paneles disponibles" class="settings-check-grid" data-i18n-aria-label="settings.panelsAvailable">
+<label class="toggle toggle-settings">
+<input checked="" id="toggleGeneral" type="checkbox"/>
+<span data-i18n="settings.panelToggles.general">General</span>
+</label>
+<label class="toggle toggle-settings">
+<input checked="" id="toggleDynamic" type="checkbox"/>
+<span data-i18n="settings.panelToggles.dynamic">Dinámico</span>
+</label>
+<label class="toggle toggle-settings settings-toggle-wide">
+<input checked="" id="toggleInspector" type="checkbox"/>
+<span data-i18n="settings.panelToggles.inspector">Panel derecho</span>
+</label>
+</div>
+</div>
+</div>
+<main class="workspace app-main" id="appMain">
+<div class="studio-layout" id="studioLayout">
+<aside class="side-column side-left" id="leftSidebar">
+<section class="panel shape-square" id="panelGeneral">
+<div class="inner">
+<div class="head">
+<strong data-i18n="panels.general.title">⚙️ Ajustes generales</strong>
+<button class="btn x" data-close="#panelGeneral" type="button">×</button>
+</div>
+<div class="body">
+<div class="control">
+<label data-i18n="panels.general.mode" for="mode">Modo</label>
+<select class="sel" id="mode">
+<option data-i18n="panels.general.modeOptions.free" value="free">Dibujo libre</option>
+<option data-i18n="panels.general.modeOptions.shape" value="shape">Figuras</option>
+<option data-i18n="panels.general.modeOptions.formula" value="formula">Fórmulas (x(t), y(t))</option>
+</select>
+</div>
+<div class="button-stack general-actions-stack">
+<button class="btn" data-i18n="panels.general.newCanvas" id="btnClear" type="button">Nuevo lienzo</button>
+<button class="btn ghost" data-i18n="panels.general.undo" data-i18n-title="panels.general.undoTitle" id="btnUndo" title="Deshacer (Ctrl+Z)" type="button">Deshacer</button>
+<button class="btn ghost" data-i18n="panels.general.redo" data-i18n-title="panels.general.redoTitle" id="btnRedo" title="Rehacer (Ctrl+Y)" type="button">Rehacer</button>
+</div>
+<input accept=".json" hidden="" id="fileDesign" type="file"/>
+<div class="button-stack general-file-stack">
+<button class="btn" data-i18n="panels.general.saveDesign" id="btnSaveDesign" type="button">Guardar diseño</button>
+<button class="btn" data-i18n="panels.general.loadDesign" id="btnLoadDesign" type="button">Cargar diseño</button>
+</div>
+<button class="btn export-btn" data-i18n="panels.general.exportPng" id="btnExportPNG" type="button">Exportar imagen (PNG)</button>
+<button class="btn export-btn" data-i18n="panels.general.exportClip20s" id="btnExportClip20s" type="button">Exportar clip 20s</button>
+</div>
+</div>
+</section>
+<section class="panel shape-square" id="panelDynamic">
+<div class="inner">
+<div class="head">
+<strong data-i18n="panels.dynamic.title">⚡ Ajustes dinámicos</strong>
+<button class="btn x" data-close="#panelDynamic" type="button">×</button>
+</div>
+<div class="body">
+<h4 class="panel-subheading" data-i18n="panels.dynamic.playback">Reproducción</h4>
+<div class="grid2">
+<button class="btn" data-i18n="panels.dynamic.play" id="btnDynPlay" type="button">Reproducir</button>
+<button class="btn ghost" data-i18n="panels.dynamic.pause" id="btnDynPause" type="button">Pausar</button>
+</div>
+<div class="control">
+<label data-i18n-label="panels.dynamic.duration">Duración estimada <span class="duration-box" data-i18n="runtime.zeroSeconds" id="dynDuration">0.0 s</span></label>
+</div>
+<input accept="audio/*" hidden="" id="audioFileInput" type="file"/>
+<h4 class="panel-subheading" data-i18n="panels.dynamic.audioSection">Audio</h4>
+<div class="grid2 media-actions-grid">
+<button class="btn" data-i18n="panels.dynamic.addAudio" id="btnAddAudio" type="button">Añadir audio</button>
+<button class="btn ghost" data-i18n="panels.dynamic.removeAudio" disabled="" id="btnRemoveAudio" type="button">Eliminar audio</button>
+</div>
+<div class="small muted panel-note media-status" data-i18n="panels.dynamic.audioStatusEmpty" id="audioFileStatus">Sin audio cargado.</div>
+<div class="grid2 media-actions-grid">
+<button class="btn" data-i18n="panels.dynamic.recordMic" id="btnRecordMic" type="button">Grabar micrófono</button>
+<button class="btn ghost" data-i18n="panels.dynamic.removeRecording" disabled="" id="btnRemoveRecordedAudio" type="button">Eliminar grabación</button>
+</div>
+<div class="small muted panel-note media-status" data-i18n="panels.dynamic.recordStatusEmpty" id="micRecordStatus">Sin grabación.</div>
+<h4 class="panel-subheading" data-i18n="panels.dynamic.effect">Efecto</h4>
+<div class="control">
+<label data-i18n-label="panels.dynamic.effectType">Tipo
+                    <select class="sel" id="dynEffect">
+<option data-i18n="panels.dynamic.effectOptions.none" value="none">Ninguno</option>
+<option data-i18n="panels.dynamic.effectOptions.typewriter" value="typewriter">Typewriting</option>
+<option data-i18n="panels.dynamic.effectOptions.random" value="random">Aparición aleatoria</option>
+<option data-i18n="panels.dynamic.effectOptions.wave" value="wave">Onda</option>
+</select>
+</label>
+</div>
+<div class="effect-group" id="eg-typewriter">
+<div class="control">
+<label data-i18n-label="panels.dynamic.delayPerCharacter">Delay por carácter (ms)
+                      <input id="twDelay" max="2000" min="1" type="number" value="60"/>
+</label>
+</div>
+<label class="chip" data-i18n-label="panels.dynamic.repeat"><input class="checkbox" id="twLoop" type="checkbox"/> Repetir</label>
+</div>
+<div class="effect-group" id="eg-random">
+<div class="control">
+<label data-i18n-label="panels.dynamic.delayPerCharacter">Delay por carácter (ms)
+                      <input id="randDelay" max="2000" min="1" type="number" value="40"/>
+</label>
+</div>
+</div>
+<div class="effect-group" id="eg-wave">
+<div class="grid2">
+<label data-i18n-label="panels.dynamic.waveAmplitude">Amplitud (px) <input id="waveAmp" max="200" min="0" type="number" value="10"/></label>
+<label data-i18n-label="panels.dynamic.waveFrequency">Frecuencia <input id="waveFreq" max="10" min="0" step="0.01" type="number" value="0.25"/></label>
+</div>
+<div class="control">
+<label data-i18n-label="panels.dynamic.waveSpeed">Velocidad (rad/s) <input id="waveSpeed" max="20" min="-20" step="0.01" type="number" value="2"/></label>
+</div>
+</div>
+<h4 class="panel-subheading" data-i18n="panels.dynamic.view">Vista</h4>
+<div class="control">
+<label data-i18n-label="panels.dynamic.viewMode">Modo
+                    <select class="sel" id="viewMode">
+<option data-i18n="panels.dynamic.viewModes.2d" selected="" value="2d">2D</option>
+<option data-i18n="panels.dynamic.viewModes.3d" value="3d">3D</option>
+</select>
+</label>
+</div>
+<div class="effect-group" id="eg-3d">
+<div class="grid2">
+<label data-i18n-label="panels.dynamic.rotX">Rot X (°) <input id="rotX" max="180" min="-180" step="1" type="number" value="0"/></label>
+<label data-i18n-label="panels.dynamic.rotY">Rot Y (°) <input id="rotY" max="180" min="-180" step="1" type="number" value="0"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.dynamic.rotZ">Rot Z (°) <input id="rotZ" max="180" min="-180" step="1" type="number" value="0"/></label>
+<label data-i18n-label="panels.dynamic.depth">Profundidad <input id="depth" max="2000" min="0" step="10" type="number" value="280"/></label>
+</div>
+<label class="chip" data-i18n-label="panels.dynamic.autoCamera"><input class="checkbox" id="autoCam" type="checkbox"/> Cámara automática</label>
+<label class="chip" data-i18n-label="panels.dynamic.returnToStart"><input class="checkbox" id="camReturnHome" type="checkbox"/> Volver al inicio</label>
+<label class="chip" data-i18n-label="panels.dynamic.inverseMode" hidden="" id="camInverseWrap"><input class="checkbox" id="camInverse" type="checkbox"/> Modo inverso</label>
+<div class="grid2">
+<label data-i18n-label="panels.dynamic.velocityH">Vel. horizontal (°/s) <input id="velH" max="360" min="-360" step="1" type="number" value="15"/></label>
+<label data-i18n-label="panels.dynamic.velocityV">Vel. vertical (°/s) <input id="velV" max="360" min="-360" step="1" type="number" value="6"/></label>
+</div>
+<div class="control">
+<label data-i18n-label="panels.dynamic.velocityZ">Vel. rotación Z (°/s) <input id="velR" max="360" min="-360" step="1" type="number" value="0"/></label>
+</div>
+<div class="small muted panel-note" data-i18n="panels.dynamic.shortcuts">Atajos: flechas ← → ↑ ↓ para X/Y y Q/E para Z.</div>
+</div>
+</div>
+</div>
+</section>
+</aside>
+<div class="canvas-stage">
+<div class="canvas-wrap card-panel">
+<canvas height="900" id="calyCanvas" width="1400"></canvas>
+<div class="legend" data-i18n-html="workspace.legend">Consejo: en <b>Dibujo libre</b> pulsa y arrastra; el texto se “estampa” cada cierto paso.</div>
+</div>
+</div>
+<aside class="side-column side-right" id="rightSidebar">
+<section class="panel shape-square panel-inspector" id="panelInspector">
+<div class="inner">
+<div class="head">
+<strong data-i18n="panels.inspector.title">🗂️ Panel de ajustes</strong>
+<button class="btn x" data-close="#panelInspector" type="button">×</button>
+</div>
+<div class="body body-tabbed">
+<div aria-label="Categorías de ajustes" class="panel-tabs" data-i18n-aria-label="tabs.categories" role="tablist">
+<button aria-controls="tabPaneText" aria-selected="true" class="panel-tab is-active" data-i18n="tabs.text" data-tab="text" id="tabBtnText" role="tab" type="button">Texto</button>
+<button aria-controls="tabPaneVisual" aria-selected="false" class="panel-tab" data-i18n="tabs.visual" data-tab="visual" id="tabBtnVisual" role="tab" type="button">Visualización</button>
+<button aria-controls="tabPaneFigure" aria-selected="false" class="panel-tab" data-i18n="tabs.figure" data-tab="figure" id="tabBtnFigure" role="tab" type="button">Figura</button>
+<button aria-controls="tabPaneFormula" aria-selected="false" class="panel-tab" data-i18n="tabs.formula" data-tab="formula" id="tabBtnFormula" role="tab" type="button">Fórmula</button>
+</div>
+<div class="tab-panes">
+<section aria-labelledby="tabBtnText" class="tab-pane is-active" data-pane="text" id="tabPaneText" role="tabpanel">
+<div class="tab-pane-inner">
+<h4 class="tab-pane-title" data-i18n="panels.text.title">🔤 Ajustes de texto</h4>
+<div class="control">
+<label data-i18n="panels.text.text" for="text">Texto</label>
+<textarea class="text-input-area" id="text" rows="5">C△lyCaLigramas</textarea>
+<div class="text-options-row">
+<label class="chip" data-i18n-label="panels.text.loopText"><input checked="" class="checkbox" id="loopText" type="checkbox"/> Ciclar texto</label>
+<button class="btn ghost text-start-btn" data-i18n="panels.text.startText" data-i18n-title="panels.text.startTextTitle" id="btnTextStart" title="Reinicia el siguiente dibujo desde el inicio del texto y coloca el cursor al principio." type="button">Iniciar texto</button>
+</div>
+<div class="text-options-row">
+<label class="chip" data-i18n-label="panels.text.autoOrient"><input checked="" class="checkbox" id="autoOrient" type="checkbox"/> Orientar al trazo</label>
+<label class="chip" data-i18n-label="panels.text.byWord"><input class="checkbox" id="byWord" type="checkbox"/> Por palabra</label>
+</div>
+</div>
+<div class="control">
+<label data-i18n="panels.text.family" for="fontFamily">Familia</label>
+<select class="sel" id="fontFamily">
+<option data-i18n="panels.text.fontOptions.system" value="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial">Sistema</option>
+<option data-i18n="panels.text.fontOptions.serif" value="serif">Serif</option>
+<option data-i18n="panels.text.fontOptions.monospace" value="monospace">Monospace</option>
+</select>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.text.sizeMin">Tamaño min <input id="sizeMin" max="300" min="6" type="number" value="14"/></label>
+<label data-i18n-label="panels.text.sizeMax">Tamaño max <input id="sizeMax" max="400" min="6" type="number" value="44"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.text.weight">Peso <input id="fontWeight" max="900" min="100" step="100" type="number" value="700"/></label>
+<label data-i18n-label="panels.text.letterSpacing">Espaciado <input id="letterSpacing" max="20" min="-5" type="number" value="0"/></label>
+</div>
+<label class="chip" data-i18n-label="panels.text.italic"><input class="checkbox" id="italic" type="checkbox"/> Itálica</label>
+</div>
+</section>
+<section aria-labelledby="tabBtnVisual" class="tab-pane" data-pane="visual" hidden="" id="tabPaneVisual" role="tabpanel">
+<div class="tab-pane-inner">
+<h4 class="tab-pane-title" data-i18n="panels.visual.title">🌈 Ajustes de visualización</h4>
+<h4 class="panel-subheading" data-i18n="panels.visual.color3d">Color &amp; 3D</h4>
+<div class="grid2">
+<label data-i18n-label="panels.visual.colorA">Color A <input id="colorA" type="color" value="#22d3ee"/></label>
+<label data-i18n-label="panels.visual.colorB">Color B <input id="colorB" type="color" value="#a78bfa"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.visual.alpha">Alpha <input id="alpha" max="1" min="0" step="0.05" type="number" value="0.95"/></label>
+<label data-i18n-label="panels.visual.shade3d">Brillo 3D <input id="shade3d" max="1" min="-1" step="0.05" type="number" value="0.25"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.visual.zFreq">Z‑frecuencia <input id="zFreq" max="10" min="0" step="0.1" type="number" value="1.2"/></label>
+<label data-i18n-label="panels.visual.zPhase">Z‑fase <input id="zPhase" max="6.28" min="-6.28" step="0.01" type="number" value="0"/></label>
+</div>
+<h4 class="panel-subheading" data-i18n="panels.visual.stamping">Estampado</h4>
+<div class="grid2">
+<label data-i18n-label="panels.visual.spacing">Paso (px) <input id="spacing" max="200" min="4" type="number" value="18"/></label>
+<label data-i18n-label="panels.visual.baseAngle">Rotación (°) <input id="baseAngle" max="360" min="-360" type="number" value="0"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.visual.jitterSize">Jitter tamaño (%) <input id="jitterSize" max="100" min="0" type="number" value="12"/></label>
+<label data-i18n-label="panels.visual.jitterAngle">Jitter ángulo (°) <input id="jitterAngle" max="90" min="0" type="number" value="6"/></label>
+</div>
+<div class="grid2">
+<label class="chip" data-i18n-label="panels.visual.grid"><input class="checkbox" id="showGrid" type="checkbox"/> Rejilla</label>
+<label class="chip" data-i18n-label="panels.visual.darkBg"><input checked="" class="checkbox" id="darkBG" type="checkbox"/> Fondo oscuro</label>
+</div>
+<label class="chip" data-i18n-label="panels.visual.fitOnResize"><input checked="" class="checkbox" id="fitOnResize" type="checkbox"/> Ajustar a resize</label>
+</div>
+</section>
+<section aria-labelledby="tabBtnFigure" class="tab-pane" data-pane="figure" hidden="" id="tabPaneFigure" role="tabpanel">
+<div class="tab-pane-inner shape-only">
+<h4 class="tab-pane-title" data-i18n="panels.figure.title">🧩 Ajustes de figura</h4>
+<div class="control">
+<label data-i18n="panels.figure.type" for="shape">Tipo</label>
+<select class="sel" id="shape">
+<option data-i18n="panels.figure.typeOptions.circle" value="circle">Círculo</option>
+<option data-i18n="panels.figure.typeOptions.spiral" value="spiral">Espiral</option>
+<option data-i18n="panels.figure.typeOptions.rose" value="rose">Rosa</option>
+<option data-i18n="panels.figure.typeOptions.heart" value="heart">Corazón</option>
+<option data-i18n="panels.figure.typeOptions.polygon" value="polygon">Polígono</option>
+<option data-i18n="panels.figure.typeOptions.lissajous" value="lissajous">Lissajous</option>
+</select>
+</div>
+<div class="control">
+<label data-i18n-label="panels.figure.amplitude">Radio/Amplitud <input id="pA" type="number" value="160"/></label>
+</div>
+<div class="control">
+<label data-i18n-label="panels.figure.param2">Param 2 (vueltas/k/lados) <input id="pB" type="number" value="5"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.figure.steps">Pasos t <input id="pSteps" max="20000" min="50" type="number" value="1200"/></label>
+<label data-i18n-label="panels.figure.rotate">Girar figura (°) <input id="pRotate" max="360" min="-360" type="number" value="0"/></label>
+</div>
+<button class="btn ok" data-i18n="panels.figure.generate" id="btnGenShape" type="button">Generar figura</button>
+</div>
+</section>
+<section aria-labelledby="tabBtnFormula" class="tab-pane" data-pane="formula" hidden="" id="tabPaneFormula" role="tabpanel">
+<div class="tab-pane-inner formula-only">
+<h4 class="tab-pane-title" data-i18n="panels.formula.title">∑ Ajustes de fórmula</h4>
+<div class="control">
+<label data-i18n-label="panels.formula.fx">x(t) = <input id="fx" type="text" value="cos(2*t)*(1+0.3*cos(12*t))"/></label>
+<label data-i18n-label="panels.formula.fy">y(t) = <input id="fy" type="text" value="sin(2*t)*(1+0.3*cos(12*t))"/></label>
+<label data-i18n-label="panels.formula.fz">z(t) = <input id="fz" type="text" value="0.5+0.5*sin(6*t)"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.formula.tMin">t min <input id="tMin" step="0.01" type="number" value="0"/></label>
+<label data-i18n-label="panels.formula.tMax">t max <input id="tMax" step="0.01" type="number" value="6.283185"/></label>
+</div>
+<div class="grid2">
+<label data-i18n-label="panels.formula.tSteps">Pasos t <input id="tSteps" max="50000" min="50" type="number" value="1600"/></label>
+<label class="input-inline" data-i18n-label="panels.formula.autoScale">Escala auto <input checked="" class="checkbox" id="autoScale" type="checkbox"/></label>
+</div>
+<button class="btn ok" data-i18n="panels.formula.generate" id="btnGenFormula" type="button">Generar fórmula</button>
+<div class="small muted panel-note" data-i18n="panels.formula.help">Funciones: sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max; consts: PI, E.</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</aside>
+</div>
+</main>
+<footer class="footer brand-footer" id="siteFooter" role="contentinfo">
+<div class="footer-left">
+<div class="f-left-row1">
+<strong data-i18n="footer.brand">OptimeFlow(s)</strong>
+<span class="sep">•</span>
+<span data-i18n="footer.app" id="footerAppName">C△lyCaLigramas</span>
+</div>
+<div class="f-left-row2">
+<span id="f-year"></span>
+<span class="sep">•</span>
+<a aria-label="ORCID de Andrés Calvo Espinosa" class="footer-author-link" data-i18n="footer.author" data-i18n-aria-label="footer.authorOrcid" data-i18n-title="footer.authorOrcid" href="https://orcid.org/0009-0005-4079-7418" id="f-author" rel="noopener noreferrer" target="_blank" title="ORCID de Andrés Calvo Espinosa">Andrés Calvo Espinosa</a>
+</div>
+</div>
+<div class="footer-center">
+<button aria-label="Coherencia Universal" class="footer-logo-btn" data-i18n-aria-label="footer.coherenceLabel" data-i18n-title="footer.coherenceLabel" id="coherenceLink" title="Coherencia Universal" type="button">
+<img alt="Coherencia Universal" class="tag-logo footer-logo heat" data-i18n-alt="footer.iconAlt" sizes="(max-width: 600px) 40px, 28px" src="assets/img/calycaligramas192.png" srcset="assets/img/calycaligramas192.png 192w, assets/img/calycaligramas512.png 512w"/>
+</button>
+</div>
+<div class="footer-right">
+<button class="btn ghost" data-i18n="footer.license" id="licenseLink" type="button">MIT</button>
+<button class="btn ghost" data-i18n="footer.privacy" id="privacyLink" type="button">Privacidad</button>
+</div>
+</footer>
+<div aria-live="polite" id="sw-update-toast" role="status"><span data-i18n="toast.updateAvailable" id="swUpdateText">Nueva versión disponible ·</span> <button data-i18n="toast.reload" id="btn-sw-reload" type="button">Actualizar</button>
+</div>
+<div aria-atomic="true" aria-hidden="true" aria-live="polite" class="export-progress-toast" hidden="" id="export-progress-toast" role="status">
+<div class="export-progress-head">
+<strong id="exportProgressTitle">Generando vídeo</strong>
+<span id="exportProgressPercent">0%</span>
+</div>
+<div class="small export-progress-copy" id="exportProgressText">Preparando exportación...</div>
+<div aria-describedby="exportProgressText" aria-labelledby="exportProgressTitle" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="export-progress-track" id="exportProgressTrack" role="progressbar">
+<div class="export-progress-bar" id="exportProgressBar"></div>
+</div>
+</div>
+<div aria-hidden="true" class="overlay" id="clipExportOverlay">
+<div class="box export-clip-box">
+<h2 data-i18n="dialogs.exportClip.title" id="clipExportTitle">Exportar clip de 20 s</h2>
+<p class="small overlay-copy" data-i18n="dialogs.exportClip.body" id="clipExportBody">Elige el formato de vídeo. MP4 solo se activará si tu navegador puede grabarlo de forma nativa.</p>
+<div class="export-format-grid">
+<button class="btn export-format-btn" id="btnExportClipWebmOption" type="button">
+<span class="export-format-name" data-i18n="dialogs.exportClip.webm" id="clipExportWebmName">WebM</span>
+<span class="export-format-meta" id="clipExportWebmMeta">—</span>
+</button>
+<button class="btn export-format-btn" id="btnExportClipMp4Option" type="button">
+<span class="export-format-name" data-i18n="dialogs.exportClip.mp4" id="clipExportMp4Name">MP4</span>
+<span class="export-format-meta" id="clipExportMp4Meta">—</span>
+</button>
+</div>
+<div class="overlay-actions">
+<button class="btn ghost" data-i18n="common.close" id="btnCloseClipExport" type="button">Cerrar</button>
+</div>
+</div>
+</div>
+<div class="overlay" id="privacyOverlay">
+<div class="box">
+<h2 data-i18n="overlays.privacy.title" id="ppTitle">Privacidad y tratamiento local de datos</h2>
+<div class="small overlay-copy" id="ppBody"></div>
+<div class="overlay-actions">
+<button class="btn ghost" data-i18n="common.close" id="btnClosePrivacy" type="button">Cerrar</button>
+</div>
+</div>
+</div>
+<div class="overlay" id="licenseOverlay">
+<div class="box">
+<h2 data-i18n="overlays.license.title">Licencia MIT</h2>
+<pre class="license-text" id="licenseBody"></pre>
+<div class="overlay-actions overlay-actions-inline">
+<button class="btn" data-i18n="common.copy" id="btnCopyLicense" type="button">Copiar</button>
+<button class="btn ghost" data-i18n="common.close" id="btnCloseLicense" type="button">Cerrar</button>
+</div>
+</div>
+</div>
+<div class="overlay" id="coherenceOverlay">
+<div class="box coherence-box">
+<h2 data-i18n="overlays.coherence.title">Coherencia Universal</h2>
+<p class="small overlay-copy" data-i18n="overlays.coherence.body">
+          Que esta obra sirva como agradecimiento y como compromiso: pensar, sentir y actuar en la misma dirección, sin "adornos"; seguir creando con ética, con alegría y con respeto por todo lo que nos conecta.
+        </p>
+<div class="overlay-actions">
+<button class="btn ghost" data-i18n="common.close" id="btnCloseCoherence" type="button">Cerrar</button>
+</div>
+</div>
+</div>
+<svg aria-hidden="true" focusable="false" class="shell-filter">
+      <filter id="heat-waves">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="1" seed="3">
+          <animate
+            attributeName="baseFrequency"
+            dur="7.5s"
+            values="0.012 0.02; 0.02 0.04; 0.012 0.02; 0.012 0.02"
+            keyTimes="0;0.3;0.6;1"
+            calcMode="spline"
+            keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0 0 1 1"
+            repeatCount="indefinite"
+          />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="0">
+          <animate
+            attributeName="scale"
+            dur="7.5s"
+            values="0;28;0;0"
+            keyTimes="0;0.3;0.6;1"
+            calcMode="spline"
+            keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0 0 1 1"
+            repeatCount="indefinite"
+          />
+        </feDisplacementMap>
+      </filter>
+    </svg>
+</div>
+<script src="./i18n.js"></script>
+<script src="./exportmp4.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

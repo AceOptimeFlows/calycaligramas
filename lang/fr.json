@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "title": "OptimeFlow(s) — C△lyCaLigramas",
+    "applicationName": "C△lyCaLigramas",
+    "appleTitle": "C△lyCaLigramas"
+  },
+  "brand": {
+    "optimeflow": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "logoAlt": "Logo d’OptimeFlow(s)",
+    "logoLinkLabel": "OptimeFlow(s)"
+  },
+  "common": {
+    "settings": "Paramètres",
+    "close": "Fermer",
+    "copy": "Copier",
+    "copied": "Copié",
+    "copyError": "Impossible de copier",
+    "secondsUnit": "s",
+    "infinity": "∞"
+  },
+  "settings": {
+    "theme": "Thème",
+    "language": "Langue",
+    "panels": "Panneaux",
+    "panelsAvailable": "Panneaux disponibles",
+    "resetPanels": "Réorganiser les panneaux",
+    "panelToggles": {
+      "general": "Général",
+      "dynamic": "Dynamique",
+      "inspector": "Panneau droit"
+    },
+    "themes": {
+      "original": "Original",
+      "bosque": "Forêt",
+      "cyber": "Néon cyber",
+      "luz": "Lumière",
+      "carbono": "Carbone",
+      "matrix": "Matrix",
+      "vaporwave": "Vaporwave"
+    },
+    "languages": {
+      "es": "ES",
+      "en": "EN",
+      "pt-br": "PT‑BR",
+      "fr": "FR",
+      "it": "IT",
+      "de": "DE",
+      "ko": "KO",
+      "ja": "JA",
+      "zh": "ZH",
+      "ru": "RU",
+      "hi": "HI",
+      "ca": "CA"
+    },
+    "installButton": "Installer l’app",
+    "installHintIos": "Sur iPhone/iPad, utilisez Partager → Ajouter à l’écran d’accueil."
+  },
+  "workspace": {
+    "legend": "Astuce : en <b>Dessin libre</b>, cliquez et faites glisser ; le texte est « estampé » à intervalles réguliers."
+  },
+  "tabs": {
+    "categories": "Catégories de paramètres",
+    "text": "Texte",
+    "visual": "Affichage",
+    "figure": "Figure",
+    "formula": "Formule"
+  },
+  "panels": {
+    "general": {
+      "title": "⚙️ Paramètres généraux",
+      "mode": "Mode",
+      "modeOptions": {
+        "free": "Dessin libre",
+        "shape": "Figures",
+        "formula": "Formules (x(t), y(t))"
+      },
+      "newCanvas": "Nouveau canevas",
+      "undo": "Annuler",
+      "redo": "Rétablir",
+      "undoTitle": "Annuler (Ctrl+Z)",
+      "redoTitle": "Rétablir (Ctrl+Y)",
+      "saveDesign": "Enregistrer le design",
+      "loadDesign": "Charger le design",
+      "exportPng": "Exporter l’image (PNG)",
+      "exportClip20s": "Exporter le clip de 20 s",
+      "exportClipBusy": "Export du clip..."
+    },
+    "dynamic": {
+      "title": "⚡ Paramètres dynamiques",
+      "playback": "Lecture",
+      "play": "Lire",
+      "pause": "Mettre en pause",
+      "duration": "Durée estimée",
+      "effect": "Effet",
+      "effectType": "Type",
+      "effectOptions": {
+        "none": "Aucun",
+        "typewriter": "Machine à écrire",
+        "random": "Apparition aléatoire",
+        "wave": "Onde"
+      },
+      "delayPerCharacter": "Délai par caractère (ms)",
+      "repeat": "Répéter",
+      "waveAmplitude": "Amplitude (px)",
+      "waveFrequency": "Fréquence",
+      "waveSpeed": "Vitesse (rad/s)",
+      "view": "Vue",
+      "viewMode": "Mode",
+      "viewModes": {
+        "2d": "2D",
+        "3d": "3D"
+      },
+      "rotX": "Rot X (°)",
+      "rotY": "Rot Y (°)",
+      "rotZ": "Rot Z (°)",
+      "depth": "Profondeur",
+      "autoCamera": "Caméra automatique",
+      "returnToStart": "Revenir au début",
+      "inverseMode": "Mode inverse",
+      "velocityH": "Vit. horizontale (°/s)",
+      "velocityV": "Vit. verticale (°/s)",
+      "velocityZ": "Vit. rotation Z (°/s)",
+      "shortcuts": "Raccourcis : flèches ← → ↑ ↓ pour X/Y et Q/E pour Z.",
+      "audioSection": "Audio",
+      "addAudio": "Ajouter un audio",
+      "removeAudio": "Supprimer l’audio",
+      "audioStatusEmpty": "Aucun audio chargé.",
+      "audioStatusLoaded": "Audio chargé : {{name}}",
+      "recordMic": "Enregistrer au micro",
+      "stopRecording": "Arrêter l’enregistrement",
+      "removeRecording": "Supprimer l’enregistrement",
+      "recordStatusEmpty": "Aucun enregistrement.",
+      "recordStatusReady": "Enregistrement prêt à l’export.",
+      "recordStatusRecording": "Enregistrement depuis le microphone..."
+    },
+    "inspector": {
+      "title": "🗂️ Panneau de paramètres"
+    },
+    "text": {
+      "title": "🔤 Paramètres du texte",
+      "text": "Texte",
+      "loopText": "Boucler le texte",
+      "autoOrient": "Orienter sur le tracé",
+      "family": "Famille",
+      "fontOptions": {
+        "system": "Système",
+        "serif": "Serif",
+        "monospace": "Monospace"
+      },
+      "sizeMin": "Taille min.",
+      "sizeMax": "Taille max.",
+      "weight": "Graisse",
+      "letterSpacing": "Espacement",
+      "italic": "Italique",
+      "startText": "Redémarrer le texte",
+      "startTextTitle": "Redémarre le dessin suivant depuis le début du texte et replace le curseur au début.",
+      "byWord": "Par mot"
+    },
+    "visual": {
+      "title": "🌈 Paramètres d’affichage",
+      "color3d": "Couleur & 3D",
+      "colorA": "Couleur A",
+      "colorB": "Couleur B",
+      "alpha": "Alpha",
+      "shade3d": "Brillance 3D",
+      "zFreq": "Z‑fréquence",
+      "zPhase": "Z‑phase",
+      "stamping": "Estampage",
+      "spacing": "Pas (px)",
+      "baseAngle": "Rotation (°)",
+      "jitterSize": "Jitter de taille (%)",
+      "jitterAngle": "Jitter d’angle (°)",
+      "grid": "Grille",
+      "darkBg": "Fond sombre",
+      "fitOnResize": "Ajuster au redimensionnement"
+    },
+    "figure": {
+      "title": "🧩 Paramètres de figure",
+      "type": "Type",
+      "typeOptions": {
+        "circle": "Cercle",
+        "spiral": "Spirale",
+        "rose": "Rose",
+        "heart": "Cœur",
+        "polygon": "Polygone",
+        "lissajous": "Lissajous"
+      },
+      "amplitude": "Rayon/Amplitude",
+      "param2": "Param. 2 (tours/k/côtés)",
+      "steps": "Pas de t",
+      "rotate": "Tourner la figure (°)",
+      "generate": "Générer la figure"
+    },
+    "formula": {
+      "title": "∑ Paramètres de formule",
+      "fx": "x(t) =",
+      "fy": "y(t) =",
+      "fz": "z(t) =",
+      "tMin": "t min",
+      "tMax": "t max",
+      "tSteps": "Pas de t",
+      "autoScale": "Échelle auto",
+      "generate": "Générer la formule",
+      "help": "Fonctions : sin, cos, tan, asin, acos, atan, sqrt, abs, log, exp, pow, sign, min, max ; constantes : PI, E."
+    }
+  },
+  "footer": {
+    "brand": "OptimeFlow(s)",
+    "app": "C△lyCaLigramas",
+    "author": "Andrés Calvo Espinosa",
+    "authorOrcid": "ORCID d’Andrés Calvo Espinosa",
+    "coherenceLabel": "Cohérence universelle",
+    "iconAlt": "Cohérence universelle",
+    "license": "MIT",
+    "privacy": "Confidentialité"
+  },
+  "toast": {
+    "updateAvailable": "Nouvelle version disponible ·",
+    "reload": "Mettre à jour"
+  },
+  "overlays": {
+    "privacy": {
+      "title": "Confidentialité et traitement local des données",
+      "body": "<p><b>OptimeFlow(s) C△lyCaLigramas</b> fonctionne principalement en local dans votre navigateur. Vos textes, tracés, paramètres, fichiers audio sélectionnés et enregistrements micro sont traités sur votre appareil pour l’affichage et l’export ; cette application n’envoie pas ce contenu créatif à des serveurs tiers.</p><ul><li><b>Données pouvant rester stockées dans votre navigateur :</b> langue, thème, visibilité des panneaux et préférences d’interface via <b>localStorage</b>, ainsi que les ressources de la PWA et les dictionnaires de langue dans le <b>cache du navigateur</b> afin de permettre le chargement et l’usage hors ligne.</li><li><b>Audio et microphone :</b> l’accès au microphone n’est demandé que si vous choisissez d’enregistrer. Les audios que vous chargez ou enregistrez sont gérés localement pour la lecture et l’export du clip.</li><li><b>Exportations :</b> les fichiers PNG, JSON et vidéo sont générés dans votre navigateur et téléchargés directement sur votre appareil.</li><li><b>Connectivité :</b> l’application peut demander ses propres fichiers statiques et traductions depuis la même origine pour se charger ou se mettre à jour en tant que PWA. Dans ce bundle, aucun traceur, outil d’analyse ni bibliothèque JavaScript tierce redistribuée n’a été identifié.</li><li><b>Contrôle utilisateur :</b> vous pouvez effacer les données locales depuis votre navigateur, révoquer l’autorisation du micro à tout moment et supprimer, depuis l’application elle-même, l’audio chargé ou enregistré avant l’export.</li></ul><p><b>Responsable :</b> Andrés Calvo Espinosa.<br/>Dernière mise à jour : {{updated}}.</p>"
+    },
+    "license": {
+      "title": "Licence MIT",
+      "body": "MIT License\n\nCopyright (c) {{year}} {{author}}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+    },
+    "coherence": {
+      "title": "Cohérence universelle",
+      "body": "Que cette œuvre serve à la fois de remerciement et d’engagement : penser, ressentir et agir dans la même direction, sans « ornements » ; continuer à créer avec éthique, joie et respect pour tout ce qui nous relie."
+    }
+  },
+  "messages": {
+    "formulaError": "Erreur dans les formules",
+    "tooFewPoints": "Trop peu de points valides",
+    "invalidFile": "Fichier invalide",
+    "copied": "Copié",
+    "copyError": "Impossible de copier",
+    "swError": "Erreur du service worker",
+    "exportClipUnsupported": "L’export vidéo n’est pas disponible dans ce navigateur.",
+    "exportClipError": "Impossible d’exporter le clip vidéo.",
+    "audioFileError": "Impossible de charger le fichier audio.",
+    "micUnsupported": "L’enregistrement audio n’est pas disponible dans ce navigateur.",
+    "micAccessError": "Impossible d’accéder au microphone.",
+    "recordingError": "Impossible de terminer l’enregistrement audio.",
+    "exportModuleMissing": "Module d’export vidéo introuvable.",
+    "exportFormatUnsupported": "Ce format vidéo n’est pas disponible dans ce navigateur.",
+    "installUnavailable": "L’installation n’est pas disponible dans ce navigateur pour le moment.",
+    "installIosInstructions": "Sur iPhone/iPad, touchez Partager puis « Ajouter à l’écran d’accueil »."
+  },
+  "files": {
+    "exportPng": "calycaligrama.png",
+    "saveJson": "calycaligrama.json",
+    "exportClipWebm": "calycaligrama-clip-20s.webm",
+    "exportClipMp4": "calycaligrama-clip-20s.mp4"
+  },
+  "runtime": {
+    "zeroSeconds": "0.0 s",
+    "durationSeconds": "{{value}} s",
+    "durationInfinity": "∞"
+  },
+  "defaults": {
+    "text": "C△lyCaLigramas",
+    "formula": {
+      "fx": "cos(2*t)*(1+0.3*cos(12*t))",
+      "fy": "sin(2*t)*(1+0.3*cos(12*t))",
+      "fz": "0.5+0.5*sin(6*t)"
+    }
+  },
+  "dialogs": {
+    "exportClip": {
+      "title": "Exporter le clip de 20 s",
+      "body": "Choisissez le format vidéo. MP4 ne sera activé que si votre navigateur peut l’enregistrer nativement.",
+      "webm": "WebM",
+      "mp4": "MP4",
+      "available": "Disponible",
+      "unavailable": "Non disponible dans ce navigateur"
+    }
+  }
+}
