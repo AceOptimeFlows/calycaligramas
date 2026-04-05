@@ -1222,60 +1222,105 @@
   }
   const jitter = (val,pct)=> val + (Math.random()*2-1) * (Math.abs(val)*pct/100);
   // ====== Dinámico (efectos + 3D) ======
-const Anim = { playing:false, start:0, last:0, raf:0, order:[], camStartRot:null, camStartTime:0 };
+const Anim = { playing:false, start:0, last:0, raf:0, order:[], camStartRot:null, camStartTime:0, manual3DPreview:false };
+
+function cloneRotation(rot){
+  return {
+    x: Number(rot?.x) || 0,
+    y: Number(rot?.y) || 0,
+    z: Number(rot?.z) || 0
+  };
+}
+
+function easeInOutSine01(value){
+  const t = clamp(Number(value) || 0, 0, 1);
+  return 0.5 - 0.5*Math.cos(Math.PI * t);
+}
+
+function getAutoCameraProgress(tSec){
+  return clamp((Number(tSec) || 0) / AUTO_CAM_CYCLE_SECONDS, 0, 1);
+}
+
+function shouldPreview3DAtRest(){
+  return !State.view.autoCam && !!Anim.manual3DPreview;
+}
+
+function setManual3DPreview(enabled){
+  Anim.manual3DPreview = !!enabled;
+}
 
 function updateAutoCamUI(){
   const inverseWrap = $('#camInverseWrap');
   if(inverseWrap) inverseWrap.hidden = !State.view.autoCam;
 }
 
-function applyAutoCameraAtTime(tSec){
-  if(!State.view.autoCam) return;
+function getAutoCameraRotationAtTime(tSec){
+  const startRot = cloneRotation(Anim.camStartRot || State.view.rot);
+  if(!State.view.autoCam || !Anim.playing) return startRot;
 
-  const startRot = Anim.camStartRot || { x:State.view.rot.x, y:State.view.rot.y, z:State.view.rot.z };
   const cycle = AUTO_CAM_CYCLE_SECONDS;
-  const deltaX = (State.view.cam.velV || 0) * cycle;
-  const deltaY = (State.view.cam.velH || 0) * cycle;
-  const deltaZ = (State.view.cam.velR || 0) * cycle;
+  const deltaX = (Number(State.view.cam.velV) || 0) * cycle;
+  const deltaY = (Number(State.view.cam.velH) || 0) * cycle;
+  const deltaZ = (Number(State.view.cam.velR) || 0) * cycle;
+  const progress = getAutoCameraProgress(tSec);
 
   if(State.view.cam.inverse){
-    const progress = clamp(tSec / cycle, 0, 1);
     const factor = 0.5 * (1 + Math.cos(Math.PI * progress));
-    State.view.rot.x = startRot.x + deltaX * factor;
-    State.view.rot.y = startRot.y + deltaY * factor;
-    State.view.rot.z = startRot.z + deltaZ * factor;
-    return;
+    return {
+      x: startRot.x + deltaX * factor,
+      y: startRot.y + deltaY * factor,
+      z: startRot.z + deltaZ * factor
+    };
   }
 
   if(State.view.cam.returnHome){
-    const progress = clamp(tSec / cycle, 0, 1);
     const factor = Math.sin(Math.PI * progress);
-    State.view.rot.x = startRot.x + deltaX * factor;
-    State.view.rot.y = startRot.y + deltaY * factor;
-    State.view.rot.z = startRot.z + deltaZ * factor;
-    return;
+    return {
+      x: startRot.x + deltaX * factor,
+      y: startRot.y + deltaY * factor,
+      z: startRot.z + deltaZ * factor
+    };
   }
 
-  State.view.rot.x = startRot.x + (State.view.cam.velV || 0) * tSec;
-  State.view.rot.y = startRot.y + (State.view.cam.velH || 0) * tSec;
-  State.view.rot.z = startRot.z + (State.view.cam.velR || 0) * tSec;
+  return {
+    x: startRot.x + (Number(State.view.cam.velV) || 0) * tSec,
+    y: startRot.y + (Number(State.view.cam.velH) || 0) * tSec,
+    z: startRot.z + (Number(State.view.cam.velR) || 0) * tSec
+  };
 }
 
-function restoreAutoCameraStart(){
-  if(!Anim.camStartRot) return;
-  State.view.rot.x = Anim.camStartRot.x;
-  State.view.rot.y = Anim.camStartRot.y;
-  State.view.rot.z = Anim.camStartRot.z;
+function getRenderRotationAtTime(tSec, snapshot=false){
+  if(State.view.mode !== '3d') return { x:0, y:0, z:0 };
+  if(snapshot || !Anim.playing || !State.view.autoCam){
+    return cloneRotation(State.view.rot);
+  }
+  return getAutoCameraRotationAtTime(tSec);
+}
+
+function get3DRevealAtTime(tSec, snapshot=false){
+  if(State.view.mode !== '3d') return 0;
+
+  if(snapshot || !Anim.playing){
+    return shouldPreview3DAtRest() ? 1 : 0;
+  }
+
+  if(!State.view.autoCam) return 1;
+
+  const progress = getAutoCameraProgress(tSec);
+  if(State.view.cam.inverse || State.view.cam.returnHome){
+    return Math.sin(Math.PI * progress);
+  }
+
+  return easeInOutSine01(progress);
 }
 
 function restartAutoCameraPreview(){
   if(!Anim.playing || !State.view.autoCam) return;
   const now = performance.now();
-  Anim.camStartRot = { x:State.view.rot.x, y:State.view.rot.y, z:State.view.rot.z };
+  Anim.camStartRot = cloneRotation(State.view.rot);
   Anim.camStartTime = now;
-  applyAutoCameraAtTime(0);
-  syncViewRotationInputs();
-  renderDynamicFrame(Math.max(0, (Anim.last - Anim.start)/1000));
+  const animElapsed = Math.max(0, (Anim.last - Anim.start)/1000);
+  renderDynamicFrame(animElapsed, false, 0);
 }
 
 function updateDynDuration(){
@@ -1296,7 +1341,7 @@ function startAnim(){
   Anim.start=performance.now();
   Anim.last=Anim.start;
   Anim.camStartTime = Anim.start;
-  Anim.camStartRot = { x:State.view.rot.x, y:State.view.rot.y, z:State.view.rot.z };
+  Anim.camStartRot = cloneRotation(State.view.rot);
   // orden aleatoria si hace falta
   if(State.dynamic.effect==='random'){
     Anim.order = Array.from(State.stamps.keys());
@@ -1306,38 +1351,29 @@ function startAnim(){
   }else{
     Anim.order = [];
   }
-  if(State.view.autoCam){
-    applyAutoCameraAtTime(0);
-    syncViewRotationInputs();
-  }
-  renderDynamicFrame(0);
+  renderDynamicFrame(0, false, 0);
   Anim.raf = requestAnimationFrame(tickAnim);
 }
 function stopAnim(){
-  const shouldReturnToStart = !!(State.view.autoCam && State.view.cam.returnHome && Anim.camStartRot);
-
   Anim.playing=false;
   if(Anim.raf) cancelAnimationFrame(Anim.raf);
-
-  if(shouldReturnToStart) restoreAutoCameraStart();
-  syncViewRotationInputs();
+  Anim.raf = 0;
 
   if(State.view.mode==='3d') draw3DStatic(); else clearCanvas(false);
 }
 function tickAnim(ts){
   Anim.last = ts;
 
-  if(State.view.autoCam){
-    const camElapsed = Math.max(0, (ts - (Anim.camStartTime || Anim.start))/1000);
-    applyAutoCameraAtTime(camElapsed);
-  }
-
   const t = (ts - Anim.start)/1000;
-  renderDynamicFrame(t);
+  const camElapsed = State.view.autoCam
+    ? Math.max(0, (ts - (Anim.camStartTime || Anim.start))/1000)
+    : t;
+
+  renderDynamicFrame(t, false, camElapsed);
   if(Anim.playing) Anim.raf = requestAnimationFrame(tickAnim);
 }
 
-function renderDynamicFrame(tSec, snapshot=false){
+function renderDynamicFrame(tSec, snapshot=false, camSec=tSec){
   const ctx = Canvas.ctx; if(!ctx) return;
   const W = Canvas.el.width/Canvas.dpr, H = Canvas.el.height/Canvas.dpr;
   const cx=W/2, cy=H/2;
@@ -1363,8 +1399,14 @@ function renderDynamicFrame(tSec, snapshot=false){
   }
 
   const is3D = (State.view.mode==='3d');
-  const rx = rad(State.view.rot.x||0), ry = rad(State.view.rot.y||0), rz = rad(State.view.rot.z||0);
-  const depth = State.view.depth||300, camDist = (State.view.camDist||800);
+  const reveal3D = is3D ? get3DRevealAtTime(camSec, snapshot) : 0;
+  const rotationBlend = is3D ? reveal3D : 0;
+  const renderRot = is3D ? getRenderRotationAtTime(camSec, snapshot) : { x:0, y:0, z:0 };
+  const rx = rad((renderRot.x || 0) * rotationBlend);
+  const ry = rad((renderRot.y || 0) * rotationBlend);
+  const rz = rad((renderRot.z || 0) * rotationBlend);
+  const depth = (State.view.depth || 300) * reveal3D;
+  const camDist = (State.view.camDist || 800);
 
   const list = [];
   for(const i of visibleIdxs){
@@ -1384,32 +1426,34 @@ function renderDynamicFrame(tSec, snapshot=false){
     const zn = (s.size - State.font.sizeMin)/span;
     pz = (zn - 0.5) * depth;
 
-    let screenX=px, screenY=py, scale=1;
-    if(is3D){
+    let screenX=px, screenY=py, scale=1, depthZ=0;
+    if(is3D && reveal3D > 0.0001){
       let x = px - cx, y = py - cy, z = pz;
 
-      let y1 = y*Math.cos(rx) - z*Math.sin(rx);
-      let z1 = y*Math.sin(rx) + z*Math.cos(rx);
+      const y1 = y*Math.cos(rx) - z*Math.sin(rx);
+      const z1 = y*Math.sin(rx) + z*Math.cos(rx);
       y = y1; z = z1;
 
-      let x2 = x*Math.cos(ry) + z*Math.sin(ry);
-      let z2 = -x*Math.sin(ry) + z*Math.cos(ry);
+      const x2 = x*Math.cos(ry) + z*Math.sin(ry);
+      const z2 = -x*Math.sin(ry) + z*Math.cos(ry);
       x = x2; z = z2;
 
-      let x3 = x*Math.cos(rz) - y*Math.sin(rz);
-      let y3 = x*Math.sin(rz) + y*Math.cos(rz);
+      const x3 = x*Math.cos(rz) - y*Math.sin(rz);
+      const y3 = x*Math.sin(rz) + y*Math.cos(rz);
       x = x3; y = y3;
+      depthZ = z;
 
-      const f = camDist/(camDist - z);
+      const perspectiveDenominator = Math.max(120, camDist - z);
+      const f = camDist / perspectiveDenominator;
       screenX = cx + x*f;
       screenY = cy + y*f;
-      scale   = Math.max(0.1, f);
+      scale   = clamp(f, 0.1, 4);
     }
 
-    list.push({ i, x:screenX, y:screenY, size:s.size*scale, angle:s.angle, color:s.color, alpha:s.alpha, z:pz });
+    list.push({ i, x:screenX, y:screenY, size:s.size*scale, angle:s.angle, color:s.color, alpha:s.alpha, z:depthZ });
   }
 
-  if(is3D) list.sort((a,b)=> a.z - b.z);
+  if(is3D && reveal3D > 0.0001) list.sort((a,b)=> a.z - b.z);
 
   for(const d of list){
     drawChar(State.stamps[d.i].ch, d.x, d.y, d.size, d.angle, d.color, d.alpha);
@@ -1433,7 +1477,7 @@ function drawChar(ch,x,y,size,angle,color,alpha){
   ctx.restore();
 }
 
-function draw3DStatic(){ renderDynamicFrame(0, true); }
+function draw3DStatic(){ renderDynamicFrame(0, true, 0); }
 
   // Historial
   function pushHistory(){ State.undoStack.push(JSON.stringify(State.stamps)); State.redoStack.length=0; }
@@ -2029,7 +2073,8 @@ function draw3DStatic(){ renderDynamicFrame(0, true); }
     on('#waveSpeed','change',(e)=>{ State.dynamic.wave.speed= parseFloat(e.target.value)||2; });
 
     // Vista
-    const refresh3DView = (resetAutoCam=false)=>{
+    const refresh3DView = (resetAutoCam=false, preview3D=null)=>{
+      if(typeof preview3D === 'boolean') setManual3DPreview(preview3D);
       if(State.view.mode !== '3d'){
         if(!Anim.playing) clearCanvas(false);
         return;
@@ -2043,45 +2088,66 @@ function draw3DStatic(){ renderDynamicFrame(0, true); }
 
     on('#viewMode','change', (e)=>{
       State.view.mode = e.target.value;
+      if(State.view.mode==='3d') setManual3DPreview(false);
       refreshEffectUI();
       updateAutoCamUI();
       if(State.view.mode==='3d'){
         if(Anim.playing && State.view.autoCam) restartAutoCameraPreview();
         else draw3DStatic();
       }else{
+        setManual3DPreview(false);
         clearCanvas(false);
       }
     });
 
-    on('#rotX','change', (e)=>{ State.view.rot.x = parseFloat(e.target.value)||0; refresh3DView(true); });
-    on('#rotY','change', (e)=>{ State.view.rot.y = parseFloat(e.target.value)||0; refresh3DView(true); });
-    on('#rotZ','change', (e)=>{ State.view.rot.z = parseFloat(e.target.value)||0; refresh3DView(true); });
-    on('#depth','change',(e)=>{ State.view.depth = parseFloat(e.target.value)||280; refresh3DView(false); });
+    on('#rotX','change', (e)=>{
+      State.view.rot.x = parseFloat(e.target.value)||0;
+      refresh3DView(true, !State.view.autoCam);
+    });
+    on('#rotY','change', (e)=>{
+      State.view.rot.y = parseFloat(e.target.value)||0;
+      refresh3DView(true, !State.view.autoCam);
+    });
+    on('#rotZ','change', (e)=>{
+      State.view.rot.z = parseFloat(e.target.value)||0;
+      refresh3DView(true, !State.view.autoCam);
+    });
+    on('#depth','change',(e)=>{
+      State.view.depth = parseFloat(e.target.value)||280;
+      refresh3DView(false, !State.view.autoCam);
+    });
 
     on('#autoCam','change', (e)=>{
       State.view.autoCam = !!e.target.checked;
+      if(State.view.autoCam) setManual3DPreview(false);
       updateAutoCamUI();
       if(Anim.playing && State.view.mode==='3d' && State.view.autoCam) restartAutoCameraPreview();
+      else if(State.view.mode==='3d') draw3DStatic();
     });
     on('#camReturnHome','change', (e)=>{
       State.view.cam.returnHome = !!e.target.checked;
       if(Anim.playing && State.view.mode==='3d' && State.view.autoCam) restartAutoCameraPreview();
+      else if(State.view.mode==='3d') draw3DStatic();
     });
     on('#camInverse','change', (e)=>{
       State.view.cam.inverse = !!e.target.checked;
       if(Anim.playing && State.view.mode==='3d' && State.view.autoCam) restartAutoCameraPreview();
+      else if(State.view.mode==='3d') draw3DStatic();
     });
     on('#velH','change', (e)=>{
       State.view.cam.velH = parseFloat(e.target.value)||0;
       if(Anim.playing && State.view.mode==='3d' && State.view.autoCam) restartAutoCameraPreview();
+      else if(State.view.mode==='3d') draw3DStatic();
     });
     on('#velV','change', (e)=>{
       State.view.cam.velV = parseFloat(e.target.value)||0;
       if(Anim.playing && State.view.mode==='3d' && State.view.autoCam) restartAutoCameraPreview();
+      else if(State.view.mode==='3d') draw3DStatic();
     });
     on('#velR','change', (e)=>{
       State.view.cam.velR = parseFloat(e.target.value)||0;
       if(Anim.playing && State.view.mode==='3d' && State.view.autoCam) restartAutoCameraPreview();
+      else if(State.view.mode==='3d') draw3DStatic();
     });
 
     refreshEffectUI();
@@ -2121,8 +2187,10 @@ function draw3DStatic(){ renderDynamicFrame(0, true); }
         if(key==='e'){ State.view.rot.z += step; used=true; }
         if(used){
           e.preventDefault();
+          if(!State.view.autoCam) setManual3DPreview(true);
           syncViewRotationInputs();
-          draw3DStatic();
+          if(Anim.playing && State.view.autoCam) restartAutoCameraPreview();
+          else draw3DStatic();
         }
       }
     });
