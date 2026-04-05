@@ -11,7 +11,7 @@
 
 'use strict';
 
-const SW_VERSION = '2026-04-04-v1.1';
+const SW_VERSION = 'v1.0';
 const CACHE_PREFIX = 'calycaligramas';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-${SW_VERSION}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-${SW_VERSION}`;
